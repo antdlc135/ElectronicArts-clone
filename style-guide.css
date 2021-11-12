@@ -1,0 +1,103 @@
+:root{
+    width: 100vw;
+    height: 100vh;
+    font-family: Verdana, Helvetica;
+    color: #161616;
+
+}
+
+a{
+    color: #161616;
+    text-decoration: none;
+}
+
+p{
+    font-size: 1.12rem;
+}
+
+h1{
+    font-size: 3.40rem;
+    color:#f3f3f3;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 2.75rem;
+    font-weight: 600;
+}
+
+h6{
+    font-size: 1.12rem;
+    color:#f3f3f3;
+    font-weight: 400;
+}
+
+.nav-elements{
+    font-size: 1.12rem;
+    text-decoration: none;
+}
+
+.button-text{
+    font-size: 1.12rem;
+    font-weight: 400;
+}
+
+.button-white-text{
+    font-size: 1.12rem;
+    font-weight: 400;
+    color:#f3f3f3;
+}
+
+.article-brand-name{
+    color: #ff4747;
+    font-size: 1rem;
+}
+
+.article-date{
+    font-size: 1rem;
+}
+
+.article-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.social-title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.a-social-footer{
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.p-social-footer{
+    font-size: 0.8rem;
+}
+
+
+.a-bottom-footer{
+    font-family: 'Oswald';
+    font-size: 1.12rem;
+}
+
+.text-legal-footer{
+    font-family: 'Seravek';
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url("assets/Oswald-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Seravek';
+    src: url("db.onlinewebfonts.com/c/5403db4e1a69d1dc66c1390eaca099d8?family=Seravek+Basic");
+}
+
