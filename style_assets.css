@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+.bt {
+    background-color: blueviolet;
+}
+
+.giochi-ev {
+    background-color: brown;
+}

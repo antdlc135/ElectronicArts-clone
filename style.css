@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    height: 100vh;
+}
+
+header {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-black {
+    background-color: #161616;
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+}
+
+.nav-black > ul {
+    display: flex;
+    list-style-type: none;
+    padding: 5px;
+}
+
+.nav-black a {
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    height: 55px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.circles-nav {
+    height: 100%;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-circle {
+    background-color: black;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    margin: 3px;
+}
+
+section button {
+    width: 150px;
+    height: 45px;
+    background-color: #ff4747;
+    color: white;
+    border-radius: 5px;
+}
