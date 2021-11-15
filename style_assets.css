@@ -13,10 +13,37 @@ main {
     width: 100%;
 }
 
+.nav-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    height: 60px;
+}
+
+.icon {
+    height: 18px;
+    fill: #f3f3f3;
+}
+
+.ea-icon {
+    fill: #a3a3a3;
+    height: 24px;
+}
+
 .bt {
     background-color: blueviolet;
 }
 
 .giochi-ev {
     background-color: brown;
+}
+
+.social-icons {
+    display: flex;
+    background-color: lightslategray;
+}
+
+.social-icon {
+    height: 24px;
 }
