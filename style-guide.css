@@ -1,8 +1,11 @@
 :root{
     width: 100vw;
     height: 100vh;
-    font-family: Verdana, Helvetica;
     color: #161616;
+    --main-font: Verdana, Helvetica;
+    --bottom-footer-font: 'Oswald';
+    --legal-font: 'Seravek';
+    font-family: var(--main-font);
 
 }
 
@@ -87,12 +90,12 @@ h6{
 
 
 .a-bottom-footer{
-    font-family: 'Oswald';
+    font-family: var(--bottom-footer-font)
     font-size: 1.12rem;
 }
 
 .text-legal-footer{
-    font-family: 'Seravek';
+    font-family: var(--legal-font);
 }
 
 @font-face {
