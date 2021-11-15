@@ -14,11 +14,11 @@ a{
     text-decoration: none;
 }
 
-p{
+p, .article-content{
     font-size: 1.12rem;
 }
 
-h1{
+h1, .banner-title{
     font-size: 3.40rem;
     color:#f3f3f3;
     font-weight: 600;
@@ -29,12 +29,12 @@ h2{
     font-weight: 600;
 }
 
-h3{
+h3, .main-title{     
     font-size: 2.75rem;
     font-weight: 600;
 }
 
-h6{
+h6, .banner-subtitle{
     font-size: 1.12rem;
     color:#f3f3f3;
     font-weight: 400;
@@ -56,46 +56,47 @@ h6{
     color:#f3f3f3;
 }
 
-.article-brand-name{
+.article-brand-name{ /*stile applicato al nome brand che si trova nella anteprima degli articoli(ultime novità)*/
     color: #ff4747;
     font-size: 1rem;
 }
 
-.article-date{
+.article-date{ /*stile applicato alle date che si trovano nella anteprima degli articoli(ultime novità)*/
     font-size: 1rem;
 }
 
-.article-title{
+.article-title{ /*titolo degli articoli(ultime novità)*/
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.sub-banner-title{
+.sub-banner-title{ /*banner azzurro parental control prima del footer*/
     font-size: 1.63rem;
     font-weight: 600;
 }
-.social-title{
+.social-title{ /*titolo sopra le icone social del footer*/
     font-size: 1rem;
     font-weight: 600;
 }
 
-.a-social-footer{
+.a-social-footer{ /*links social footer*/
     font-size: 1rem;
     text-decoration: none;
 }
 
-.p-social-footer{
+.p-social-footer{ /*condizioni, testo in alto all'interno del social footer*/
     font-size: 0.8rem;
 }
 
 
-.a-bottom-footer{
+.a-bottom-footer{ /*links bottom footer in grassetto*/
     font-family: var(--bottom-footer-font);
     font-size: 1.12rem;
 }
 
-.text-legal-footer{
+.text-legal-footer{ /*links legal footer*/
     font-family: var(--legal-font);
+    font-weight: 100;
 }
 
 @font-face {
@@ -105,6 +106,6 @@ h6{
 
 @font-face {
     font-family: 'Seravek';
-    src: url("db.onlinewebfonts.com/c/5403db4e1a69d1dc66c1390eaca099d8?family=Seravek+Basic");
+    src: url("assets/Seravek\ Basic.ttf");
 }
 
