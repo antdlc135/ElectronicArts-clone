@@ -1,3 +1,22 @@
+:root {
+    --main-colour: #ff4747;
+    --secondary-colour: #eaeaea;
+    --rare-cyan: #5aa0d6;
+    --ea-black: #161616;
+  
+    --ea-dark-color: #161616;
+    --ea-light-color: #f3f3f3;
+    --ea-dark-color-rgb: 22, 22, 22;
+    --ea-light-color-rgb: 243, 243, 243;
+    --origin-brand-color: #f56c2c;
+    --ea-access-brand-color: #0089cd;
+    --xbox-brand-color: #52b043;
+    --playstation-brand-color: #003087;
+    --nintendo-brand-color: #fe0016;
+    --ea-success-color: #00dc8f;
+    --ea-error-color: #ff6969;
+  }
+  
 * {
     margin: 0;
     border: 0;
@@ -15,10 +34,10 @@ header {
 }
 
 .nav-black {
-    background-color: #161616;
+    background-color: var(--ea-black);
     display: flex;
     justify-content: flex-end;
-    height: 40px;
+    height: 45px;
     padding: 5px 10px;
 }
 
@@ -55,6 +74,7 @@ nav {
 
 nav h3 {
     padding: 0px 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .circles-nav {
