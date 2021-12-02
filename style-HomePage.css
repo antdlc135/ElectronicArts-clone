@@ -2,16 +2,19 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
+  
 }
 
 .button{
-  padding: 12px;
+  padding: 12px 24px;
+
   font-size: 18px;
   border: 2px solid;
   border-radius: 2px;
 }
 
 .button:hover{
+
   padding: 16px;
   transition: 0.5s;
 }
@@ -107,4 +110,13 @@
 
 #tab img {
   width: 100%;
+
+
+  padding: 16px 26px;  
 }
+
+.white{
+  color: white;
+  border-color: white;
+}
+
