@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.button{
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid;
+  border-radius: 2px;
+}
+
+.button:hover{
+  padding: 16px;
+  transition: 0.5s;
+}
+
+.section-lastnews-h2{
+  width: 100%;
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.section-lastnews-list{
+  
+  display: flex;
+  justify-content: center;
+}
+
+.lastNewsNav{
+  width: 65%;
+  height: 60px;
+  position: relative;
+  ;
+}
+
+.lastNewsNavList{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  position: absolute;
+  bottom: 0px;
+  
+  
+}
+
+.lastNewsNavList li{
+  padding: 10px;
+  border-right: 3px solid;
+  
+}
+
+.lastNewsTab{
+  width: 70%;
+
+}
+.container-lastNewsTab{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.buttonAndTab {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: indigo;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  
+  
+}
+
+.buttonAndTab h3 {
+  font-size: 22px;
+  padding: 5px;
+}
+.buttonAndTab p {
+  padding: 5px;
+  font-size: 16px;
+}
+.buttonAndTab span {
+  font-size: 14px;
+  font-weight: 600;
+}
+#topic {
+  color: var(--main-colour);
+  font-weight: 600;
+}
+
+#tab {
+  display: flex;
+  flex-direction: column;
+  width: 368px;
+}
+
+#tab div {
+  height: 258px;
+  width: 100%;
+  padding: 24px;
+  line-height: 27px;
+  background-color: white;
+}
+
+#tab img {
+  width: 100%;
+}
