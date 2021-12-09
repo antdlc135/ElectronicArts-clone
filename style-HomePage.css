@@ -3,3 +3,110 @@
   border: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --main-colour: #ff4747;
+  --secondary-colour: #eaeaea;
+  --rare-cyan: #5aa0d6;
+  --ea-black: #161616;
+
+  --ea-dark-color: #161616;
+  --ea-light-color: #f3f3f3;
+  --ea-dark-color-rgb: 22, 22, 22;
+  --ea-light-color-rgb: 243, 243, 243;
+  --origin-brand-color: #f56c2c;
+  --ea-access-brand-color: #0089cd;
+  --xbox-brand-color: #52b043;
+  --playstation-brand-color: #003087;
+  --nintendo-brand-color: #fe0016;
+  --ea-success-color: #00dc8f;
+  --ea-error-color: #ff6969;
+
+  color: var(--ea-dark-color);
+  --main-font: Verdana, Helvetica;
+  --bottom-footer-font: "Oswald";
+  --legal-font: "Seravek";
+  font-family: var(--main-font);
+}
+
+body {
+  height: 100vh;
+}
+
+main {
+  height: 100%;
+}
+
+main header {
+  background-image: url("styleGuide/assets/OQ4FLE.jpg");
+  background-size: cover;
+  height: 80vh;
+}
+
+main h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.grid {
+  margin-top: 2rem;
+  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 17vw);
+  grid-template-rows: repeat(2, 35vh);
+}
+
+.battleFieldMainBody {
+  background-image: url("styleGuide/assets/Battlefield-2042-Open-Beta-scaled.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.FIFA22MainBody {
+  background-image: url("styleGuide/assets/fifa22-gen5-ultimate-edition-packart.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.FI21MainBody {
+  background-image: url("styleGuide/assets/fi2021.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.NfSHPMainBody {
+  background-image: url("styleGuide/assets/s903xz8pn3gTqY4bcKEAxnBo.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.ApexLegendsMainBody {
+  background-image: url("styleGuide/assets/apex-legends.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.theSims4MainBody {
+  background-image: url("styleGuide/assets/theSims4.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
