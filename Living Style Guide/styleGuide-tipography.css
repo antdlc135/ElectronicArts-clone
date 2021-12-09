@@ -23,9 +23,9 @@
   --bottom-footer-font: "Oswald";
   --legal-font: "Seravek";
   font-family: var(--main-font);
+  margin: 0;
 }
-:root {
-}
+
 
 .tipography main {
   height: 100%;
@@ -49,6 +49,7 @@ a {
 p,
 .article-content {
   font-size: 1.12rem;
+  margin: 0;
 }
 
 h1,
@@ -117,17 +118,17 @@ h6,
 }
 .social-title {
   /*titolo sopra le icone social del footer*/
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
 }
 
 .a-social-footer {
   /*links social footer*/
-  font-size: 1rem;
+  font-size: 0.875rem;
   text-decoration: none;
 }
 
-.p-social-footer {
+.notice-text { 
   /*condizioni, testo in alto all'interno del social footer*/
   font-size: 0.8rem;
 }
