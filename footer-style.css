@@ -12,9 +12,6 @@
     flex-direction: column;
 }
 
-.footer-padding{
-    padding: 1rem 12.5rem 1rem 12.5rem;
-}
 
 #a-social-footer{
     flex-wrap: wrap;
@@ -23,10 +20,11 @@
 
 #social-footer{
     background-color: var(--secondary-colour);
+    padding: 3.5rem 12.5rem 3.5rem 12.5rem;
 }
 
 .links-n-icon{
-    padding: 1.5rem 0 1.5rem 0;
+    padding: 1.5rem 0;
 }
 
 .social{
@@ -68,12 +66,20 @@
 }
 
 .bottom-right-footer{
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .selection{
     height: 5vh;
     margin: 0;
-    border: 2px solid var(--secondary-colour);
+    border: 2px solid rgb(118, 118, 118);
     border-radius: 5%;
+    align-items: center;
+    padding: .8rem;
+}
+
+.selection > img{
+    width: 20px;
+    height: 20px;
+    padding: 0.5rem;
 }
