@@ -32,6 +32,7 @@
 body {
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 }
 
 body > main {
@@ -70,8 +71,8 @@ main h3 {
   margin-top: 2rem;
   gap: 25px;
   display: grid;
-  grid-template-columns: repeat(3, 350px);
-  grid-template-rows: repeat(2, 360px);
+  grid-template-columns: repeat(3, 400px);
+  grid-template-rows: repeat(2, 410px);
 }
 
 .battleFieldMainBody {
@@ -111,4 +112,9 @@ main h3 {
   width: 100%;
   background-size: cover;
   overflow: hidden;
+}
+
+body > nav,
+header {
+  position: sticky;
 }
