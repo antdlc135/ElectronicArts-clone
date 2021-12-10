@@ -30,20 +30,20 @@
 }
 
 body {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-main {
-  height: 100%;
+body > main {
+  flex-basis: 100%;
 }
 
-main header {
-  background-image: url("styleGuide/assets/OQ4FLE.jpg");
-  background-size: cover;
-  height: 80vh;
+.border {
+  border: 5px dashed green;
 }
 
 main h3 {
+  margin-top: 4rem;
   font-size: 2.2rem;
   font-weight: 800;
 }
@@ -52,61 +52,63 @@ main h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 4rem;
+}
+
+.flexRowBeetw {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flexRowStart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .grid {
   margin-top: 2rem;
   gap: 25px;
   display: grid;
-  grid-template-columns: repeat(3, 17vw);
-  grid-template-rows: repeat(2, 35vh);
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: repeat(2, 360px);
 }
 
 .battleFieldMainBody {
   background-image: url("styleGuide/assets/Battlefield-2042-Open-Beta-scaled.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  overflow: hidden;
 }
 
 .FIFA22MainBody {
   background-image: url("styleGuide/assets/fifa22-gen5-ultimate-edition-packart.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  overflow: hidden;
 }
 
 .FI21MainBody {
   background-image: url("styleGuide/assets/fi2021.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  overflow: hidden;
 }
 
 .NfSHPMainBody {
   background-image: url("styleGuide/assets/s903xz8pn3gTqY4bcKEAxnBo.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  overflow: hidden;
 }
 
 .ApexLegendsMainBody {
   background-image: url("styleGuide/assets/apex-legends.jpg");
+}
+
+.theSims4MainBody {
+  background-image: url("styleGuide/assets/theSims4.jpg");
+}
+
+.backImgBehaviour {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   overflow: hidden;
 }
 
-.theSims4MainBody {
-  background-image: url("styleGuide/assets/theSims4.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+.mainHeader {
+  background-image: url("styleGuide/assets/Battlefield-2042.jpg");
+  flex-basis: 70vh;
+  width: 100%;
   background-size: cover;
   overflow: hidden;
 }

@@ -1,0 +1,50 @@
+body > header {
+  background-color: var(--ea-black);
+  flex-basis: 2.5rem;
+}
+
+body > nav {
+  flex-basis: 3.75rem;
+}
+
+body > header {
+  background-color: var(--ea-black);
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  gap: 39px;
+}
+
+.ea-icon {
+  fill: #a3a3a3;
+}
+
+.icon-nav {
+  height: 18px;
+  fill: #f3f3f3;
+}
+
+.circles-nav {
+  height: 100%;
+  flex-basis: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-circle {
+  background-color: black;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  margin: 2px;
+}
+
+.logo {
+  flex-basis: 10vw;
+  margin-left: 10px;
+}
+
+.navMenu {
+  gap: 20px;
+}
