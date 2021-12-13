@@ -1,80 +1,107 @@
+:root {
+  --main-colour: #ff4747;
+  --secondary-colour: #eaeaea;
+  --rare-cyan: #5aa0d6;
+  --ea-black: #161616;
+
+  --ea-dark-color: #161616;
+  --ea-light-color: #f3f3f3;
+  --ea-dark-color-rgb: 22, 22, 22;
+  --ea-light-color-rgb: 243, 243, 243;
+  --origin-brand-color: #f56c2c;
+  --ea-access-brand-color: #0089cd;
+  --xbox-brand-color: #52b043;
+  --playstation-brand-color: #003087;
+  --nintendo-brand-color: #fe0016;
+  --ea-success-color: #00dc8f;
+  --ea-error-color: #ff6969;
+
+  color: var(--ea-dark-color);
+  --main-font: Verdana, Helvetica;
+  --bottom-footer-font: "Oswald";
+  --legal-font: "Seravek";
+  font-family: var(--main-font);
+}
+
 * {
   margin: 0;
   border: 0;
   box-sizing: border-box;
-  
-}
-
-.button{
-  padding: 12px 24px;
-
-  font-size: 18px;
-  border: 2px solid;
-  border-radius: 2px;
-}
-
-.button:hover{
-
-  padding: 16px;
-  transition: 0.5s;
-}
-
-.section-lastnews-h2{
-  width: 100%;
-  background-color: blue;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.section-lastnews-list{
-  
-  display: flex;
-  justify-content: center;
-}
-
-.lastNewsNav{
-  width: 65%;
-  height: 60px;
-  position: relative;
-  ;
-}
-
-.lastNewsNavList{
-  display: flex;
-  flex-direction: row;
   list-style-type: none;
-  position: absolute;
-  bottom: 0px;
-  
-  
+  text-decoration: none;
+  font-family: var(--main-font);
+  color: var(--ea-dark-color-rgb);
 }
 
-.lastNewsNavList li{
-  padding: 10px;
-  border-right: 3px solid;
+.last-news{
+  background-color: var(--secondary-colour);
+}
+
+.section-buttonAndTab{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   
-}
-
-.lastNewsTab{
-  width: 70%;
 
 }
-.container-lastNewsTab{
+.header-last-news{
+  border-bottom: 2px solid #DEDEDE;
+  margin-bottom: 60px;
+}
+
+.last-news-h2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 40px;
+  margin-bottom: 30px;
+}
+
+.last-news-h2 h2{
+  font-size: 38px;
+}
+
+.last-news-nav{
+  height: 40px;
   display: flex;
   justify-content: center;
-  
 }
+
+.last-news-nav nav{
+  width: 70%;
+  
+  position: relative;
+}
+
+.last-news-nav ul{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: -50px;
+  bottom: 0px;
+  font-size: 17px;
+
+}
+
+.last-news-nav li{
+  padding: 20px 10px;
+  border-right: 3px solid #DEDEDE;
+}
+
+
 
 .buttonAndTab {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: indigo;
-  justify-content: center;
   align-items: center;
-  gap: 10px;
-  
-  
+  width: 70%;
+  gap: 15px;
+}
+
+.buttonAndTab a{
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+
 }
 
 .buttonAndTab h3 {
@@ -110,13 +137,24 @@
 
 #tab img {
   width: 100%;
-
-
-  padding: 16px 26px;  
 }
 
-.white{
-  color: white;
-  border-color: white;
+.section-div-button{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
 
+button{
+  padding: 18px 30px;
+  background-color: var(--secondary-colour);
+  font-size: 18px;
+  border: 2px solid;
+  border-radius: 2px;
+}
+
+button:hover{
+
+  padding: 20px 35px;
+  
+}
