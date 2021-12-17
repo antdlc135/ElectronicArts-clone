@@ -1,9 +1,9 @@
 :root {
+  --opacity: 0;
   --main-colour: #ff4747;
   --secondary-colour: #eaeaea;
   --rare-cyan: #5aa0d6;
   --ea-black: #161616;
-
   --ea-dark-color: #161616;
   --ea-light-color: #f3f3f3;
   --ea-dark-color-rgb: 22, 22, 22;
@@ -41,13 +41,29 @@
   font-weight: 600;
 }
 
-#tab {
+.tab {
   display: flex;
   flex-direction: column;
   width: 368px;
+  position: relative;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
+  transition: transform 300ms;
+  transition-timing-function: ease-out;
 }
 
-#tab div {
+.tab::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 20px 40px 50px 0 rgba(0, 0, 0, 0.5);
+  opacity: var(--opacity, 0);
+  transition: opacity 500ms;
+}
+
+.tab div {
   height: 258px;
   width: 100%;
   padding: 24px;
@@ -55,6 +71,6 @@
   background-color: white;
 }
 
-#tab img {
+.tab img {
   width: 100%;
 }

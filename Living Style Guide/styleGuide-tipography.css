@@ -20,12 +20,9 @@
 
   color: var(--ea-dark-color);
   --main-font: Verdana, Helvetica;
-  --bottom-footer-font: "Oswald";
-  --legal-font: "Seravek";
   font-family: var(--main-font);
   margin: 0;
 }
-
 
 .tipography main {
   height: 100%;
@@ -128,7 +125,7 @@ h6,
   text-decoration: none;
 }
 
-.notice-text { 
+.notice-text {
   /*condizioni, testo in alto all'interno del social footer*/
   font-size: 0.8rem;
 }
@@ -143,16 +140,6 @@ h6,
   /*links legal footer*/
   font-family: var(--legal-font);
   font-weight: 100;
-}
-
-@font-face {
-  font-family: "Oswald";
-  src: url("assets/Oswald-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Seravek";
-  src: url("assets/Seravek\ Basic.ttf");
 }
 
 /* end tipography */
