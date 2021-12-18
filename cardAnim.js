@@ -1,4 +1,16 @@
 function cardAnim() {
+  let btn = document.querySelectorAll(".title");
+  btn.forEach((el) => {
+    el.onmouseover = () => {
+      el.previousElementSibling.style.opacity = 1;
+      el.firstElementChild.style.transform = "translate(0, -50px)";
+      el.onmouseout = () => {
+        el.previousElementSibling.style.opacity = 0;
+        el.firstElementChild.style.transform = "translate(0, 0)";
+      };
+    };
+  });
+
   let card = document.querySelectorAll(".tab");
   card.forEach((el) => {
     el.onmouseover = () => {
@@ -10,17 +22,6 @@ function cardAnim() {
       };
     };
   });
-  let btn = document.querySelectorAll(".appendBackgr");
-  btn.forEach((el) => {
-    el.onmouseover = () => {
-      el.style.background =
-        "linear-gradient(to left, rgba(178, 55, 72, 90%), rgba(65, 31, 66, 90%)";
-      el.onmouseout = () => {
-        el.style.background = "transparent";
-      };
-    };
-  });
-  console.log(btn);
 }
 
 window.addEventListener("DOMContentLoaded", cardAnim);
