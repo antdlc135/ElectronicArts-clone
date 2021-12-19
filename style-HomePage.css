@@ -33,6 +33,9 @@ body {
   display: flex;
   flex-direction: column;
   overflow: scroll;
+  overflow-x: hidden;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5) inset;
+  height: 100%;
 }
 
 body > main {
@@ -93,12 +96,12 @@ main h3 {
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 8;
+  z-index: 6;
 }
 
 .mainBody > .grid > a > .title > img {
   transition: transform 200ms ease-out;
-  z-index: 9;
+  z-index: 7;
 }
 
 .rgbaBackground {

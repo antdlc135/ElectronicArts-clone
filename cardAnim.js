@@ -15,7 +15,7 @@ function cardAnim() {
   card.forEach((el) => {
     el.onmouseover = () => {
       el.style.setProperty("--opacity", 1);
-      el.style.transform = "translate(0, -15px)";
+      el.style.transform = "translate(0, -10px)";
       el.onmouseout = () => {
         el.style.setProperty("--opacity", 0);
         el.style.transform = "translate(0, 0)";

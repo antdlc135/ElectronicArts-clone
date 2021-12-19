@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styleGuide-tipography.css">
     <link rel="stylesheet" href="style-HomePage-cards.css">
    <script src="cardAnim.js"></script>
+   <script src="headerNavbarAnim.js"></script>
     <title>Home Page Electronic Arts - Clone</title>
   </head>
   <body>
@@ -79,15 +80,17 @@
       </a>
     </header>
     <nav class="flexRowStart">
-      <a href="https://www.ea.com/it-it/games" class="circles-nav">
+      <div href="https://www.ea.com/it-it/games" class="circles-nav flexCenterOne">
         <div class="nav-circle"></div>
         <div class="nav-circle"></div>
         <div class="nav-circle"></div>
-      </a>
+      </div>
+
       <a class="flexRowStartl logo" href="https://www.ea.com/it-it/">
-        <img src="styleGuide\assets\ealogo1.svg" alt="" height="40px" />
+        <img src="styleGuide\assets\ealogo1.svg" alt="" height="40vh" style="margin-left: 14%"/>
       </a>
-      <div class="flexRowStart navMenu">
+      
+      <div class="flexRowStart navMenu" style="margin-left: 10px">
         <a
           >Giochi
           <select name="" id=""></select
@@ -110,7 +113,7 @@
         ></a>
       </div>
     </nav>
-
+    <aside></aside>
     <main class="flexCol">
       <header class="mainHeader backImgBehaviour"></header>
       <div class="mainBody flexCol">
@@ -329,5 +332,6 @@
           </div>
       </section>
   </footer>
+  <div class="rgbaBackground rgbaBackground"></div>
   </body>
 </html>
