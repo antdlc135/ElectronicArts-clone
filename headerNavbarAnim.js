@@ -1,20 +1,21 @@
 function threeDots() {
-  let dots = document.querySelectorAll(".nav-circle");
-  let parent = dots[0].parentElement;
-  parent.onmouseover = () => {
-    dots.forEach((el) => {
-      el.style.height = "7px";
-      el.style.width = "7px";
-      el.style.margin = "2px";
-      el.style.setProperty("background-color", "red");
+  let circleSup = document.querySelector(".circlesSuperPosition");
+  let circle = document.querySelectorAll(".nav-circle");
+  let std = circleSup.firstElementChild;
+  let big = std.nextElementSibling;
+  console.log(circle);
+  circleSup.onmouseover = () => {
+    std.style.opacity = 0;
+    big.style.opacity = 1;
+    circle.forEach((element) => {
+      element.style.backgroundColor = "var(--main-colour)";
     });
   };
-  parent.onmouseout = () => {
-    dots.forEach((el) => {
-      el.style.height = "6.5px";
-      el.style.width = "6.5px";
-      el.style.margin = "0.5px";
-      el.style.setProperty("background-color", "black");
+  circleSup.onmouseout = () => {
+    std.style.opacity = 1;
+    big.style.opacity = 0;
+    circle.forEach((element) => {
+      element.style.backgroundColor = "black";
     });
   };
   //   let blackBack = document.querySelector(".rgbaBackground-body");

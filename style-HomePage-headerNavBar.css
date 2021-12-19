@@ -24,29 +24,40 @@ body > header {
   fill: #f3f3f3;
 }
 
-.circles-nav {
-  width: 20px;
-  margin-left: 22px;
+.circlesSuperPosition {
+  position: relative;
+  margin: 0 18px;
   height: 100%;
+}
+
+.circles-nav,
+.circles-nav-big {
+  margin-left: 22px;
   display: flex;
   flex-direction: column;
-  gap: 2.5px;
   cursor: pointer;
-  position: relative;
+  position: absolute;
+  transition: opacity 200ms;
+}
+
+.circles-nav-big {
+  opacity: 0;
 }
 
 .nav-circle {
-  margin: 0.5px;
   background-color: black;
-  height: 6.5px;
-  width: 6.5px;
+  margin: 1.3px;
+  height: 5.5px;
+  width: 5.5px;
   border-radius: 100%;
-  transition: height 300ms;
-  transition: width 300ms;
   transition: background-color 500ms;
-  transition: margin 300ms;
 }
 
+.circles-nav-big > .nav-circle {
+  margin: 2px;
+  height: 7px;
+  width: 7px;
+}
 .logo {
   width: 260px;
   justify-content: flex-start;
@@ -56,8 +67,4 @@ body > header {
 .navMenu {
   flex-basis: 100%;
   gap: 20px;
-}
-
-.rgbaBackground {
-  display: none;
 }
