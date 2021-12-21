@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <nav></nav>
-    </header>
 
-    <main>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
 
-    <footer></footer>
-  </body>
+<body>
+  <header>
+    <nav class="black-nav">
+      <div role="tablist" id="content">
+        <ul class="nav-black-menu" role="navigation">
+          <li class="nav-black-menu-item" role="tab" link-ref="profile" title="Profile" tabindex="0" id="profile"
+            aria-selected="false" aria-controls="profile-panel">
+            <img src="assets/user.svg" alt="user-icon" class="user-icon">
+          </li>
+          <li class="nav-black-menu-item" role="tab" link-ref="profile" title="Profile" tabindex="0" id="profile"
+            aria-selected="false" aria-controls="profile-panel">
+            <img src="assets/quest.svg" alt="question-mark-icon" class="questm-icon">
+          </li>
+          <li class="nav-black-menu-item" role="tab" link-ref="profile" title="Profile" tabindex="-1" id="profile"
+            aria-selected="false" aria-controls="profile-panel">
+            <a href="https://www.ea.com/it-it" title="EA logo" aria-label="Electronic Arts Home Page" <img
+              src="assets/EAlogo.svg" alt="EA-logo" class="EA-logo">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="white-nav">
+      <img src="assets/threeDots.svg" alt="three-dots" class="three-dots">
+      <a class="home-link" href="https://www.ea.com/it-it" title="Pagina principale di Electronic Arts">
+      <img src="assets/ea-wordmark-network-nav-coral.svg" alt="ea-writt" class="ea-writt">
+      </a>
+      <div class="drop-down">
+        <slot name="drop-down"></slot>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+  </main>
+
+  <footer></footer>
+</body>
+
 </html>
