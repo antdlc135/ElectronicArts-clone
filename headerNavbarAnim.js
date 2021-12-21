@@ -9,9 +9,27 @@ function threeDots() {
   let closeRed = document.querySelector("[src*=close-red]");
   let header = document.querySelector("body> header");
   let nav = document.querySelector(".toBackGround > nav");
+  let spanNavMenu = document.querySelectorAll("nav > .navMenu > div> span");
   let toBackGround = document.querySelector(".toBackGround");
+  let divNavMenu = document.querySelectorAll("nav > .navMenu > div");
+  let body = document.querySelector("body");
 
-  console.log(closeRed);
+  divNavMenu.forEach((el) => {
+    el.onmouseover = () => {
+      el.firstElementChild.nextElementSibling.style.transform = "rotateX(0)";
+      el.firstElementChild.nextElementSibling.setAttribute("fill", "red");
+      el.style.color = "var(--main-colour)";
+    };
+  });
+  divNavMenu.forEach((el) => {
+    el.onmouseout = () => {
+      el.firstElementChild.nextElementSibling.style.transform =
+        "rotateX(180deg)";
+      el.firstElementChild.nextElementSibling.setAttribute("fill", "intial");
+      el.style.color = "initial";
+    };
+  });
+
   circleSup.onmouseover = () => {
     std.style.opacity = 0;
     big.style.opacity = 1;
@@ -29,9 +47,11 @@ function threeDots() {
   circleSup.onclick = () => {
     blackBack.style.zIndex = 8;
     aside.style.zIndex = 9;
+    body.style.overflow = "hidden";
     blackBack.onclick = () => {
       aside.style.zIndex = -1;
       blackBack.style.zIndex = -1;
+      body.style.overflow = "scroll";
     };
   };
 
@@ -46,6 +66,7 @@ function threeDots() {
   close.onclick = () => {
     aside.style.zIndex = -1;
     blackBack.style.zIndex = -1;
+    body.style.overflow = "scroll";
   };
 
   let prevScrollPos = window.pageYOffset;

@@ -22,6 +22,24 @@ body > header {
   transition: top 500ms;
 }
 
+nav > .navMenu > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  height: 60px;
+  font-weight: 540;
+}
+
+nav > .navMenu > div > span {
+  width: 100%;
+}
+
+nav > .navMenu > div > svg {
+  transform: rotateX(180deg);
+  transition: transform 500ms;
+}
+
 .ea-icon {
   fill: #a3a3a3;
 }
@@ -92,7 +110,7 @@ body > header {
 }
 
 .toBackGround > .aside {
-  position: absolute;
+  position: fixed;
   width: 410px;
   height: 100%;
   top: 0;
