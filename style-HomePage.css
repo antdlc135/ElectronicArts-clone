@@ -158,13 +158,8 @@ main h3 {
 
 .mainHeader {
   background-image: url("styleGuide/assets/Battlefield-2042.jpg");
-  flex-basis: 70vh;
+  flex-basis: 78vh;
   width: 100%;
   background-size: cover;
   overflow: hidden;
-}
-
-body > nav,
-header {
-  position: sticky;
 }

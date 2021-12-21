@@ -7,6 +7,9 @@ function threeDots() {
   let blackBack = document.querySelector(".blackBack");
   let close = document.querySelector(".close");
   let closeRed = document.querySelector("[src*=close-red]");
+  let header = document.querySelector("body> header");
+  let nav = document.querySelector(".toBackGround > nav");
+  let toBackGround = document.querySelector(".toBackGround");
 
   console.log(closeRed);
   circleSup.onmouseover = () => {
@@ -43,6 +46,20 @@ function threeDots() {
   close.onclick = () => {
     aside.style.zIndex = -1;
     blackBack.style.zIndex = -1;
+  };
+
+  let prevScrollPos = window.pageYOffset;
+
+  window.onscroll = () => {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollPos > currentScrollPos) {
+      header.style.top = "0";
+      nav.style.top = "33px";
+    } else {
+      header.style.top = "-35px";
+      nav.style.top = "-1px";
+    }
+    prevScrollPos = currentScrollPos;
   };
 }
 

@@ -1,18 +1,25 @@
 body > header {
-  background-color: var(--ea-black);
-  flex-basis: 2.5rem;
-}
-
-body > nav {
-  flex-basis: 3.75rem;
-}
-
-body > header {
+  flex-basis: 2.6rem;
   background-color: var(--ea-black);
   display: flex;
   justify-content: flex-end;
   align-content: center;
   gap: 39px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  transition: top 300ms linear;
+}
+
+.toBackGround > nav {
+  height: 60px;
+  z-index: 7;
+  top: 35px;
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  transition: top 500ms;
 }
 
 .ea-icon {
@@ -73,7 +80,7 @@ body > header {
   height: 100%;
   width: 100%;
   position: relative;
-  background-color: white;
+  background-color: #f3f3f3;
 }
 
 .blackBack {
@@ -86,7 +93,7 @@ body > header {
 
 .toBackGround > .aside {
   position: absolute;
-  width: 16.5%;
+  width: 410px;
   height: 100%;
   top: 0;
   left: 0;
