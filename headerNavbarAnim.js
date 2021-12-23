@@ -9,6 +9,9 @@ function threeDots() {
   let closeRed = document.querySelector("[src*=close-red]");
   let header = document.querySelector("body> header");
   let nav = document.querySelector(".toBackGround > nav");
+  let select = document.querySelectorAll(
+    "nav > .navMenu > div > span > .select > section > div > a"
+  );
   let spanNavMenu = document.querySelectorAll("nav > .navMenu > div> span");
   let toBackGround = document.querySelector(".toBackGround");
   let divNavMenu = document.querySelectorAll("nav > .navMenu > div");
@@ -19,6 +22,8 @@ function threeDots() {
       el.firstElementChild.nextElementSibling.style.transform = "rotateX(0)";
       el.firstElementChild.nextElementSibling.setAttribute("fill", "red");
       el.style.color = "var(--main-colour)";
+      el.firstElementChild.firstElementChild.style.height = "320px";
+      el.firstElementChild.firstElementChild.style.visibility = "visible";
     };
   });
   divNavMenu.forEach((el) => {
@@ -27,6 +32,8 @@ function threeDots() {
         "rotateX(180deg)";
       el.firstElementChild.nextElementSibling.setAttribute("fill", "intial");
       el.style.color = "initial";
+      el.firstElementChild.firstElementChild.style.height = "0";
+      el.firstElementChild.firstElementChild.style.visibility = "hidden";
     };
   });
 
