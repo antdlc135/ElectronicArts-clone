@@ -22,8 +22,13 @@ function threeDots() {
       el.firstElementChild.nextElementSibling.style.transform = "rotateX(0)";
       el.firstElementChild.nextElementSibling.setAttribute("fill", "red");
       el.style.color = "var(--main-colour)";
-      el.firstElementChild.firstElementChild.style.transform = "scaleY(1)";
-      el.firstElementChild.firstElementChild.style.visibility = "visible";
+      el.firstElementChild.firstElementChild.style.maxHeight = "320px";
+      el.firstElementChild.firstElementChild
+        .querySelectorAll("section")
+        .forEach((element) => {
+          element.style.opacity = "1";
+          element.style.visibility = "visible";
+        });
     };
   });
   divNavMenu.forEach((el) => {
@@ -32,8 +37,13 @@ function threeDots() {
         "rotateX(180deg)";
       el.firstElementChild.nextElementSibling.setAttribute("fill", "intial");
       el.style.color = "initial";
-      el.firstElementChild.firstElementChild.style.transform = "scaleY(0)";
-      // el.firstElementChild.firstElementChild.style.visibility = "hidden";
+      el.firstElementChild.firstElementChild.style.maxHeight = "0";
+      el.firstElementChild.firstElementChild
+        .querySelectorAll("section")
+        .forEach((element) => {
+          element.style.opacity = 0;
+          element.style.visibility = "hidden";
+        });
     };
   });
 
