@@ -65,13 +65,44 @@
                 </div>
             </div>
             <div class="bottom-right-footer display-flex-column">
-                <div class="selection display-flex-row">
-                    <img src="IT-Italy-Flag-icon.png" alt="italian-flag">
-                    <span>Italia</span>
+            
+                <button class="selection display-flex-row">
+                    <div class="selected display-flex-row">
+                        <img src="IT-Italy-Flag-icon.png" alt="italian-flag">
+                        <span>Italia</span>
+                    </div>
+                    <img src="./assets/down-arrow.png" alt="down arrow" id="down-arrow">
+                </button>
+                <div class="onclick-selection">
+
                 </div>
+                
                 <img src="Living Style Guide/media-assets/seal.svg" alt="">
             </div>
         </section>
     </footer>
 </body>
+<script>
+    let onclickSelection = document.querySelector(".onclick-selection");
+    let selection = document.querySelector(".selection");
+    let arrow = document.querySelector("#down-arrow");
+    let body = document.querySelector("body");
+
+    
+        selection.onclick = () => {
+            onclickSelection.style.visibility = "visible";
+            selection.onclick = () =>{
+
+                if(onclickSelection.style.visibility === "visible"){
+                    onclickSelection.style.visibility = "hidden";  
+                }
+            }  
+
+           
+        }
+
+    
+    
+
+</script>
 </html>
