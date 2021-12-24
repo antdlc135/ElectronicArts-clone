@@ -74,7 +74,104 @@
                     <img src="./assets/down-arrow.png" alt="down arrow" id="down-arrow">
                 </button>
                 <div class="onclick-selection">
+                    <div class="flags">
+                        <div class="flag" id="us">
+                            <img src="./assets/flags/us.png" alt="us">
+                            <span>United States</span>
+                        </div>
+                        <div class="flag" id="ru">
+                            <img src="./assets/flags/ru.png" alt="us">
+                            <span>Россия</span>
+                        </div>
+                        <div class="flag" id="nor">
+                            <img src="./assets/flags/nor.png" alt="us">
+                            <span>Norge</span>
+                        </div>
+                        <div class="flag" id="uk">
+                            <img src="./assets/flags/uk.png" alt="us">
+                            <span>United Kingdom</span>
+                        </div>
+                        <div class="flag" id="es">
+                            <img src="./assets/flags/es.png" alt="us">
+                            <span>España</span>
+                        </div>
+                        <div class="flag" id="sw">
+                            <img src="./assets/flags/sw.png" alt="us">
+                            <span>Sverige</span>
+                        </div>
+                        <div class="flag" id="aus">
+                            <img src="./assets/flags/aus.png" alt="us">
+                            <span>Australia</span>
+                        </div>
+                        <div class="flag" id="ck">
+                            <img src="./assets/flags/ck.png" alt="us">
+                            <span>Česká republika</span>
+                        </div>
+                        <div class="flag" id="ch">
+                            <span>中国</span>
+                        </div>
+                        <div class="flag" id="fr">
+                            <img src="./assets/flags/fr.png" alt="us">
+                            <span>France</span>
+                        </div>
+                        <div class="flag" id="ca-en">
+                            <img src="./assets/flags/ca.png" alt="us">
+                            <span>Canada(En)</span>
+                        </div>
+                        <div class="flag" id="kr">
+                            <img src="./assets/flags/kr.png" alt="us">
+                            <span>대한민국</span>
+                        </div>
+                        <div class="flag" id="de">
+                            <img src="./assets/flags/de.png" alt="us">
+                            <span>Deustschland</span>
+                        </div>
+                        <div class="flag" id="ca-fr">
+                            <img src="./assets/flags/ca.png" alt="us">
+                            <span>Canada(Fr)</span>
+                        </div>
+                        <div class="flag" id="ch-tr">
+                            <span>繁體中文</span>
+                        </div>
+                        <div class="flag" id="it">
+                            <img src="./assets/flags/it.png" alt="us">
+                            <span>Italia</span>
+                            <img src="./assets/check.png" alt="check" id="check">
+                        </div>
+                        <div class="flag" id="dan">
+                            <img src="./assets/flags/dan.png" alt="us">
+                            <span>Danmark</span>
+                        </div>
+                        <div class="flag" id="jp">
+                            <img src="./assets/flags/jp.png" alt="us">
+                            <span>日本</span>
+                        </div>
+                        <div class="flag" id="pl">
+                            <img src="./assets/flags/pl.png" alt="us">
+                            <span>Polska</span>
+                        </div>
+                        <div class="flag" id="bl">
+                            <img src="./assets/flags/bl.png" alt="us">
+                            <span>Brasil</span>
+                        </div>
+                        <div class="flag" id="fin">
+                            <img src="./assets/flags/fin.png" alt="us">
+                            <span>Suomi</span>
+                        </div>
+                        <div class="flag" id="mex">
+                            <img src="./assets/flags/mex.png" alt="us">
+                            <span>México</span>
+                        </div>
+                        <div class="flag" id="ne">
+                            <img src="./assets/flags/ne.png" alt="us">
+                            <span>Nederland</span>
+                        </div>
+                        <div class="flag" id="tr">
+                            <img src="./assets/flags/tr.png" alt="us">
+                            <span>Türkiye</span>
+                        </div>
 
+                    </div>
                 </div>
                 
                 <img src="Living Style Guide/media-assets/seal.svg" alt="">
@@ -87,19 +184,50 @@
     let selection = document.querySelector(".selection");
     let arrow = document.querySelector("#down-arrow");
     let body = document.querySelector("body");
+    let allFlags = document.querySelectorAll(".flag");
+    let defaultCheck = document.getElementById("check");
 
-    
-        selection.onclick = () => {
+    selection.onclick = ()=>{
+        defaultCheck.style.visibility = "visible";
+        if(onclickSelection.style.visibility == "visible"){
+
+            onclickSelection.style.visibility = "hidden";
+            arrow.style.transform = "rotateX(0)";
+            selection.style.borderTop= "2px solid rgb(194, 194, 194)";
+            defaultCheck.style.visibility = "hidden";
+        }else{
+            arrow.style.transform = "rotateX(180deg)";
             onclickSelection.style.visibility = "visible";
-            selection.onclick = () =>{
-
-                if(onclickSelection.style.visibility === "visible"){
-                    onclickSelection.style.visibility = "hidden";  
-                }
-            }  
-
-           
+            selection.style.borderTop= "2px solid rgb(194, 194, 194, 0.1)";
         }
+        
+    }
+
+    let checked;
+    for(let flag of allFlags){
+        flag.addEventListener("click",()=>{
+            if(!checked){
+                checked = document.createElement("img");
+                checked.setAttribute("src", "./assets/check.png");
+                checked.setAttribute("width", "18px");
+                checked.setAttribute("height", "18px");
+                checked.setAttribute("float", "right");
+                flag.append(checked);
+                clicked = true;
+                defaultCheck.style.visibility = "hidden";
+            }else{
+                checked.remove();
+                checked = document.createElement("img");
+                checked.setAttribute("src", "./assets/check.png");
+                checked.setAttribute("width", "18px");
+                checked.setAttribute("height", "18px");
+                checked.setAttribute("float", "right");
+                flag.append(checked);
+                defaultCheck.style.visibility = "hidden";
+            }
+            
+        }, {once: true})
+    }
 
     
     
