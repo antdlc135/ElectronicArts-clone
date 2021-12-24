@@ -1,59 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-</head>
-
-<body>
-  <header>
-    <nav class="black-nav">
-      <div role="tablist" id="content">
-        <ul class="nav-black-menu" role="navigation">
-          <li class="nav-black-menu-item" role="tab" link-ref="profile" title="Profile" tabindex="0" id="profile"
-            aria-selected="false" aria-controls="profile-panel">
-            <img src="assets/user.svg" alt="user-icon" class="user-icon">
-          </li>
-          <li class="nav-black-menu-item" role="tab" link-ref="profile" title="Profile" tabindex="0" id="profile"
-            aria-selected="false" aria-controls="profile-panel">
-            <img src="assets/quest.svg" alt="question-mark-icon" class="questm-icon">
-          </li>
-          <li class="nav-black-menu-item" role="tab" link-ref="profile" title="Profile" tabindex="-1" id="profile"
-            aria-selected="false" aria-controls="profile-panel">
-            <a href="https://www.ea.com/it-it" title="EA logo" aria-label="Electronic Arts Home Page" <img
-              src="assets/EAlogo.svg" alt="EA-logo" class="EA-logo">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="white-nav">
-      <img src="assets/threeDots.svg" alt="three-dots" class="three-dots">
-      <a class="home-link" href="https://www.ea.com/it-it" title="Pagina principale di Electronic Arts">
-      <img src="assets/ea-wordmark-network-nav-coral.svg" alt="ea-writt" class="ea-writt">
-      </a>
-      <div class="drop-down">
-        <slot name="drop-down"></slot>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-  </main>
-
-  <footer></footer>
-</body>
-
-</html>
-=======
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -370,6 +316,25 @@ C331.972,223.623,330.628,214.221,324.001,209.25z"/>
       <!-- central section -->
       <div class="flexCol centralSect">
         <h3>Ultime novità</h3>
+        <div class="maintab">
+          <button class="tablink" tabindex="-1" aria-selected="false" role="tab">Notizie EA</button>
+          <button class="tablink" tabindex="-1" aria-selected="false" role="tab">EA Play</button>
+          <button class="tablink" tabindex="-1" aria-selected="false" role="tab">FIFA</button>
+          <button class="tablink" tabindex="-1" aria-selected="false" role="tab">Apex Legends</button>
+          <button class="tablink" tabindex="-1" aria-selected="false" role="tab">Battlefield</button>
+          <button class="tablink" tabindex="-1" aria-selected="false" role="tab">The Sims 4</button>
+          <button class="tablink" tabindex="-1" aria-selected="false" role="tab">F1 2021</button>
+          <button class="tablink" tabindex="-1" aria-selected="false" role="tab">Inside EA</button>
+        </div>
+        <div id="Notizie-content" class="tabcontent"></div>
+        <div id="EA-play-content" class="tabcontent"></div>
+        <div id="FIFA-content" class="tabcontent"></div>
+        <div id="Apex-content" class="tabcontent"></div>
+        <div id="Battlefield-content" class="tabcontent"></div>
+        <div id="The-Sims-content" class="tabcontent"></div>
+        <div id="F1-content" class="tabcontent"></div>
+        <div id="Inside-EA-content" class="tabcontent"></div>
+        
         <div  class="cards">
           <section class="buttonAndTab">
             <a href="https://www.ea.com/it-it/news/party-of-the-decade-update"class="tab">
@@ -514,4 +479,3 @@ C331.972,223.623,330.628,214.221,324.001,209.25z"/>
     </div>
   </body>
 </html>
->>>>>>> ea-antonio

@@ -27,6 +27,8 @@
   --bottom-footer-font: "Oswald";
   --legal-font: "Seravek";
   font-family: var(--main-font);
+
+  --ea-theme-body-font-size-desktop: 18px;
 }
 
 body {
@@ -163,3 +165,32 @@ main h3 {
   background-size: cover;
   overflow: hidden;
 }
+
+.maintab {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding-left: 10vw;
+  width: 100%;
+  user-select: none;
+  border-bottom: solid 2px;
+  border-color: rgba(0, 0, 0, 0.08);
+
+}
+
+
+.tablink {
+  cursor: pointer;
+  padding: 15px;
+  font-size: var(--ea-theme-body-font-size-desktop);
+  line-height: 27px;
+  border-right: 2px solid rgba(0, 0, 0, 0.08);  
+}
+
+ .maintab > button:last-child {
+   border: none;
+ }
+
+.tablink:hover {
+  background-color: rgb(199, 199, 199);
+} 
