@@ -181,6 +181,7 @@ nav > .navMenu > div > svg {
   top: 0;
   right: 0;
 }
+
 .toBackGround > .aside > .close > [src*="close-red"] {
   position: absolute;
   opacity: 0;
