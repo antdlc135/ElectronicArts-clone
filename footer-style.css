@@ -160,3 +160,7 @@
   float: right;
   visibility: hidden;
 }
+
+body {
+  margin-top: 300px;
+}
