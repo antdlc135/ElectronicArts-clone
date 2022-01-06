@@ -79,6 +79,7 @@ main h3 {
 .grid {
   width: 1100px;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   gap: 25px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -88,6 +89,41 @@ main h3 {
 .mainBody > .grid > a {
   position: relative;
 }
+
+.mainButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-width: 160px;
+  min-height: 60px;
+}
+
+.divMainButton {
+  min-width: 160px;
+  min-height: 60px;
+  border: 2px solid black;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 200ms;
+}
+
+.divMainButton:hover {
+  transform: scale(1.1);
+}
+
+/* .mainButton::after {
+  content: "";
+  width: 160px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(1.1);
+  transition: transform 200ms;
+} */
 
 .title {
   display: flex;
@@ -171,7 +207,7 @@ main h3 {
 
 .mainHeader {
   background-image: url("styleGuide/assets/Battlefield-2042.jpg");
-  flex-basis: 78vh;
+  flex-basis: 65vh;
   width: 100%;
   background-size: cover;
   overflow: hidden;

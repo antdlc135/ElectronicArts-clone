@@ -189,7 +189,7 @@ nav > .navMenu > div > svg {
   flex-direction: column;
   overflow: scroll;
   z-index: 9;
-  transition: left 150ms ease-out;
+  transition: left 170ms ease-out;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

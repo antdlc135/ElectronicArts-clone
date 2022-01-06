@@ -18,6 +18,17 @@ function threeDots() {
   let body = document.querySelector("body");
   let titleAside = document.querySelectorAll(".play .titleAside");
 
+  let headerSVG = document.querySelectorAll("header > a > svg");
+
+  headerSVG.forEach((el) => {
+    el.onmouseover = () => {
+      el.setAttribute("fill", "white");
+      el.onmouseout = () => {
+        el.setAttribute("fill", "red");
+      };
+    };
+  });
+
   titleAside.forEach((el) => {
     el.onmouseover = () => {
       el.firstElementChild.style.transform = "scale(1.2)";
@@ -79,10 +90,12 @@ function threeDots() {
     aside.style.top = "0";
     body.style.overflow = "hidden";
     blackBack.onclick = () => {
+      if (window.pageYOffset != 0) {
+        header.style.top = "-35px";
+        nav.style.top = "-1px";
+      }
       aside.style.left = "-410px";
       aside.style.top = "-30px";
-      header.style.top = "-35px";
-      nav.style.top = "-1px";
       blackBack.style.zIndex = -1;
       body.style.overflow = "scroll";
     };
@@ -99,8 +112,10 @@ function threeDots() {
   close.onclick = () => {
     aside.style.left = "-410px";
     aside.style.top = "-30px";
-    header.style.top = "-35px";
-    nav.style.top = "-1px";
+    if (window.pageYOffset != 0) {
+      header.style.top = "-35px";
+      nav.style.top = "-1px";
+    }
     blackBack.style.zIndex = -1;
     body.style.overflow = "scroll";
   };
