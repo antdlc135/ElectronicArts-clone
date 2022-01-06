@@ -180,10 +180,16 @@ main h3 {
 }
 .banner-hero-content{
   width: 35% ;
-  height: 50%;
-  justify-content: space-evenly;
+  height: 60%;
+  justify-content: space-between;
+  align-items: flex-start;
   max-width: 550px;
   margin-left: 20%;
+}
+
+.banner-hero-content > .mainButton, .banner-hero-content  .divMainButton{
+  border-color: white;
+  color: white;
 }
 
 .banner-hero-content > img{

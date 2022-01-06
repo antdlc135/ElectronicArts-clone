@@ -11,13 +11,23 @@ function footerAnim() {
     let socialIcons = document.querySelectorAll(".social-icons > svg");
     let selectedName = document.querySelector(".selected span");
     let selectedFlag = document.querySelector(".selected img");
+
+    selectionContainer.onmouseover = ()=>{
+        selection.style.transform = "scale(1.1)";
+    }
+    selectionContainer.onmouseout = ()=>{
+        selection.style.transform = "scale(1)";
+    }
+
+
     
     selection.onclick = ()=>{
+        selection.style.transform = "scale(1.1)";
       document.addEventListener("click", (event)=>{
           if(event.target != selectionContainer){
               onclickSelection.style.visibility = "hidden";
               defaultCheck.style.visibility = "hidden";
-              selected.style.borderTop= "2px solid rgb(194, 194, 194)";
+              selectionContainer.style.borderTop= "2px solid rgb(194, 194, 194)";
               selected.style.boxShadow = "none";
               arrow.style.transform = "rotateX(0)";
             }
@@ -27,13 +37,13 @@ function footerAnim() {
             selected.style.boxShadow = "none";
             onclickSelection.style.visibility = "hidden";
             arrow.style.transform = "rotateX(0)";
-            selected.style.borderTop= "2px solid rgb(194, 194, 194)";
+            selecteselectionContainer.style.borderTop= "2px solid rgb(194, 194, 194)";
           defaultCheck.style.visibility = "hidden";
         }else{
             arrow.style.transform = "rotateX(180deg)";
             onclickSelection.style.visibility = "visible";
             selected.style.boxShadow = "0 14px 20px 0 rgba(0, 0, 0, 0.16)";
-          selected.style.borderTop= "2px solid rgb(194, 194, 194, 0.1)";
+          selecteselectionContainer.style.borderTop= "2px solid rgb(194, 194, 194, 0.1)";
       }
         
     }
