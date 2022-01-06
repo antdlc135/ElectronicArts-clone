@@ -18,16 +18,27 @@ function threeDots() {
   let body = document.querySelector("body");
   let titleAside = document.querySelectorAll(".play .titleAside");
 
-  let headerSVG = document.querySelectorAll("header > a > svg");
+  let headerSVGa = document.querySelectorAll("header > a:not(:last-child)");
 
-  headerSVG.forEach((el) => {
+  let EA = document.querySelector("header > a:last-child");
+
+  headerSVGa.forEach((el) => {
+    el.firstElementChild.setAttribute("fill", "#9f9f9f");
+    console.log(el);
     el.onmouseover = () => {
-      el.setAttribute("fill", "white");
+      el.firstElementChild.setAttribute("fill", "#f3f3f3");
       el.onmouseout = () => {
-        el.setAttribute("fill", "red");
+        el.firstElementChild.setAttribute("fill", "#9f9f9f");
       };
     };
   });
+
+  EA.onmouseover = () => {
+    EA.firstElementChild.setAttribute("fill", "#8B8B8B");
+  };
+  EA.onmouseout = () => {
+    EA.firstElementChild.setAttribute("fill", "#5c5c5c");
+  };
 
   titleAside.forEach((el) => {
     el.onmouseover = () => {

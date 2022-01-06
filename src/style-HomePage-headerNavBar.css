@@ -19,11 +19,12 @@
 }
 
 body > header {
-  flex-basis: 2.6rem;
+  height: 2.3rem;
   background-color: var(--ea-black);
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
-  align-content: center;
+  align-items: center;
   gap: 39px;
   width: 100%;
   position: fixed;
@@ -47,8 +48,7 @@ nav > .navMenu > div {
   align-items: center;
   gap: 6px;
   cursor: pointer;
-  height: 60px;
-  font-weight: 540;
+  min-height: 75px;
 }
 
 nav > .navMenu > div > span {
