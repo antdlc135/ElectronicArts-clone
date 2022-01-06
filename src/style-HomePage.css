@@ -89,7 +89,7 @@ main h3 {
   position: relative;
 }
 
-.mainBody > .grid > a > .title {
+.title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,7 +99,8 @@ main h3 {
   z-index: 6;
 }
 
-.mainBody > .grid > a > .title > img {
+.title > img {
+  width: 45%;
   transition: transform 200ms ease-out;
   z-index: 7;
 }
@@ -117,7 +118,7 @@ main h3 {
 }
 
 .FIFA22MainBody {
-  background-image: url("styleGuide/assets/fifa22-gen5-ultimate-edition-packart.png");
+  background-image: url("styleGuide/assets/fifa22-gen5-ultimate-edition-packart.jpg");
 }
 
 .FI21MainBody {
@@ -125,7 +126,7 @@ main h3 {
 }
 
 .NfSHPMainBody {
-  background-image: url("styleGuide/assets/s903xz8pn3gTqY4bcKEAxnBo.webp");
+  background-image: url("styleGuide/assets/s903xz8pn3gTqY4bcKEAxnBo.jpg");
 }
 
 .ApexLegendsMainBody {
@@ -134,6 +135,18 @@ main h3 {
 
 .theSims4MainBody {
   background-image: url("styleGuide/assets/theSims4.jpg");
+}
+
+.madden22MainBody {
+  background-image: url("styleGuide/assets/madden22.jpg");
+}
+
+.itTakesTwoMainBody {
+  background-image: url("styleGuide/assets/itTakesTwo.png");
+}
+
+.gradientAsidePlay {
+  background-image: url("styleGuide/assets/gradientAsidePlay.png");
 }
 
 .backImgBehaviour {

@@ -1,5 +1,5 @@
 function cardAnim() {
-  let btn = document.querySelectorAll(".title");
+  let btn = document.querySelectorAll(".mainBody .title");
   btn.forEach((el) => {
     el.onmouseover = () => {
       el.previousElementSibling.style.opacity = 1;
@@ -20,6 +20,13 @@ function cardAnim() {
         el.style.setProperty("--opacity", 0);
         el.style.transform = "translate(0, 0)";
       };
+    };
+  });
+
+  let btnAside = document.querySelectorAll("");
+  btnAside.forEach((el) => {
+    el.onmouseover = () => {
+      el.onmouseout = () => {};
     };
   });
 }

@@ -5,7 +5,7 @@ function threeDots() {
   let big = std.nextElementSibling;
   let aside = document.querySelector(".toBackGround > .aside");
   let blackBack = document.querySelector(".blackBack");
-  let close = document.querySelector(".close");
+  let close = document.querySelector(".close-x");
   let closeRed = document.querySelector("[src*=close-red]");
   let header = document.querySelector("body> header");
   let nav = document.querySelector(".toBackGround > nav");
@@ -16,6 +16,16 @@ function threeDots() {
   let toBackGround = document.querySelector(".toBackGround");
   let divNavMenu = document.querySelectorAll("nav > .navMenu > div");
   let body = document.querySelector("body");
+  let titleAside = document.querySelectorAll(".play .titleAside");
+
+  titleAside.forEach((el) => {
+    el.onmouseover = () => {
+      el.firstElementChild.style.transform = "scale(1.2)";
+    };
+    el.onmouseout = () => {
+      el.firstElementChild.style.transform = "unset";
+    };
+  });
 
   divNavMenu.forEach((el) => {
     el.onmouseover = () => {
@@ -62,11 +72,17 @@ function threeDots() {
     });
   };
   circleSup.onclick = () => {
+    header.style.top = "0";
+    nav.style.top = "33px";
     blackBack.style.zIndex = 8;
-    aside.style.zIndex = 9;
+    aside.style.left = "0";
+    aside.style.top = "0";
     body.style.overflow = "hidden";
     blackBack.onclick = () => {
-      aside.style.zIndex = -1;
+      aside.style.left = "-410px";
+      aside.style.top = "-30px";
+      header.style.top = "-35px";
+      nav.style.top = "-1px";
       blackBack.style.zIndex = -1;
       body.style.overflow = "scroll";
     };
@@ -81,7 +97,10 @@ function threeDots() {
     closeRed.previousElementSibling.style.opacity = 1;
   };
   close.onclick = () => {
-    aside.style.zIndex = -1;
+    aside.style.left = "-410px";
+    aside.style.top = "-30px";
+    header.style.top = "-35px";
+    nav.style.top = "-1px";
     blackBack.style.zIndex = -1;
     body.style.overflow = "scroll";
   };
