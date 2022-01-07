@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: turquoise;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);

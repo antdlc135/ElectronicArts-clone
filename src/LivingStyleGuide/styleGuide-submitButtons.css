@@ -28,8 +28,13 @@
   min-height: 60px;
 }
 
-.buttonAndTab > .mainButton {
+.buttonAndTab > div > .mainButton {
   background-color: var(--origin-brand-color);
+}
+
+.buttonAndTab > div {
+  display: grid;
+  gap: 150px;
 }
 
 .mainButton > span {
@@ -49,6 +54,6 @@
   z-index: 0;
 }
 
-.buttonAndTab > .mainButton > .divMainButton {
+.buttonAndTab > div > .mainButton > .divMainButton {
   border: none;
 }
