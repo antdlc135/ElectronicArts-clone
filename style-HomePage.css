@@ -165,32 +165,72 @@ main h3 {
   background-size: cover;
   overflow: hidden;
 }
+ .maintab {
+   width: 100%;
+   padding-left: 100px;
 
-.maintab {
+ }
+.tabs {
   display: flex;
   flex-direction: row;
   position: relative;
-  padding-left: 10vw;
-  width: 100%;
   user-select: none;
-  border-bottom: solid 2px;
-  border-color: rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 
 }
 
+.tabs::after {
+  content: "";
+  color: rgba(233, 14, 14, 0);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.08);
+}
 
-.tablink {
+.tabs button {
   cursor: pointer;
   padding: 15px;
   font-size: var(--ea-theme-body-font-size-desktop);
   line-height: 27px;
-  border-right: 2px solid rgba(0, 0, 0, 0.08);  
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0); 
 }
 
- .maintab > button:last-child {
+.tabs button::after {
+  content: ".";
+  color: rgba(0, 0, 0, 0);
+  position: absolute;
+  bottom: 4;
+  right: 0%;
+  left: 0%;
+  height: min-content;
+  border-right: 2px solid rgba(3, 0, 0, 0.09);
+}
+
+ button:last-child::after {
    border: none;
  }
-
-.tablink:hover {
+ 
+.tabs button:hover {
   background-color: rgb(199, 199, 199);
 } 
+ 
+.tabs button:focus {
+  border-bottom: 3px solid #f85d20;
+  margin-right: 0 auto;
+} 
+.tabcontainer {
+padding-left: 10px;
+}
+
+.maintab .tabcontent {
+  display: none; 
+} 
+
+.maintab .tabcontainer .is-active {
+  display: block;
+  margin-top: 70px;
+  margin-right: 0, auto;
+}
