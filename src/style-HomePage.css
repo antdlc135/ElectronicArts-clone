@@ -253,3 +253,45 @@ main h3 {
   font-size: 20px;
   color: var(--ea-dark-color);
 }
+
+.maintab {
+  display: flex;
+  border-bottom: 2px solid #dedede;
+  width: 100%;
+  margin-bottom: 70px;
+  justify-content: center;
+}
+
+.maintab > div {
+  width: 1140px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.mainNavButt {
+  height: 60px;
+  margin-left: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.tablink {
+  width: max-content;
+  height: 30px;
+  font-size: 18px;
+  background-color: transparent;
+  color: #070707;
+  margin-right: -2px;
+  padding: 0 1rem;
+  border-right: 2px solid #dedede;
+  cursor: pointer;
+}
+
+.tablink > span {
+  display: inline-block;
+  height: 45px;
+}
+
+.tablink > #test {
+  border-bottom: 3px solid var(--main-colour);
+}
