@@ -19,6 +19,12 @@
    <script src="headerNavbarAnim.js"></script>
    <script src="footerAnim.js"></script>
    <script src="LivingStyleGuide\buttonAnim.js"></script>
+   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'it'}, 'google_translate_element');
+        }
+        </script>    <meta charset="UTF-8">
     <title>Home Page Electronic Arts - Clone</title>
   </head>
   <body>
@@ -415,11 +421,34 @@ C331.972,223.623,330.628,214.221,324.001,209.25z"/>
           <div class="divMainButton"></div>
         </a>
       </div>
+      <section class="prefooter-hero">
+        <div class="banner-hero display-flex-row">
+          <div class="banner-hero-content display-flex-column">
+            <img src="assets/ea-play-logo-coral-hero-logo-small.svg" alt="ea logo play">
+            <p class="banner-subtitle">Non limitarti al gioco. Gioca al massimo. Sblocca ricompense esclusive, contenuti per i soli membri e una libreria dei migliori titoli.</p>
+            <a class="mainButton" href="https://www.ea.com/it-it/games">
+              <span>Iscriviti subito</span>
+              <div class="divMainButton"></div>
+            </a>
+          </div>
+        </div>
+        <div class="parental-control display-flex-row">
+          <div class="parental-control-content display-flex-row">
+            <div class="parental-control-title">
+              <h2>Genitori: il controllo dei videogiochi è nelle vostre mani.</h2>
+            </div>
+            <a class="mainButton" href="https://www.ea.com/it-it/games">
+              <span>Scopri di più</span>
+              <div class="divMainButton"></div>
+            </a>
+          </div>
+        </div>
+      </section>
       <footer>
         <section class="social-footer" id="social-footer">
             <div>
               <p class="notice-text">* Le offerte potrebbero variare o cambiare. Visita il sito del rivenditore per i dettagli.</p>
-            <hr>
+            <hr />
             <div class="links-n-icon display-flex-row">
                 <div class="a-social-footer display-flex-row" id="a-social-footer">
                     <a href="#">Rapporto sull'impatto</a>
@@ -449,7 +478,8 @@ C331.972,223.623,330.628,214.221,324.001,209.25z"/>
             </div>
         </section>
         <section class="bottom-footer display-flex-row">
-            <div><img src="LivingStyleGuide\media-assets\october-ea-ring.png" alt="">
+            <div class="bottom-footer-container">
+              <img src="LivingStyleGuide\media-assets\october-ea-ring.png" alt="">
               <div class="middle-bottom-footer display-flex-column">
                   <div class="bottom-footer-links a-bottom-footer display-flex-row">
                       <a href="#">Libreria dei giochi</a>
@@ -471,115 +501,118 @@ C331.972,223.623,330.628,214.221,324.001,209.25z"/>
                   </div>
               </div>
               <div class="bottom-right-footer display-flex-column">
-                  <div id="google_translate_element"></div>
-                  
-                  <button class="selection display-flex-row">
-                      <div class="selected display-flex-row">
-                          <img src="IT-Italy-Flag-icon.png" alt="italian-flag">
-                          <span>Italia</span>
+                <div class="selection display-flex-row">
+                  <div class="selection-container"></div>
+                    <div class="selected display-flex-row">
+                      <div class="display-flex-row">
+                        <img src="IT-Italy-Flag-icon.png" alt="italian-flag">
+                        <span>Italia</span>
                       </div>
                       <img src="./assets/down-arrow.png" alt="down arrow" id="down-arrow">
-                  </button>
-                  <div class="onclick-selection">
-                      <div class="flags">
-                          <div class="flag" id="us">
-                              <img src=".\assets\flags\us.png" alt="us">
-                              <span>United States</span>
-                          </div>
-                          <div class="flag" id="ru">
-                              <img src="./assets/flags/ru.png" alt="us">
-                              <span>Россия</span>
-                          </div>
-                          <div class="flag" id="nor">
-                              <img src="./assets/flags/nor.png" alt="us">
-                              <span>Norge</span>
-                          </div>
-                          <div class="flag" id="uk">
-                              <img src="./assets/flags/uk.png" alt="us">
-                              <span>United Kingdom</span>
-                          </div>
-                          <div class="flag" id="es">
-                              <img src="./assets/flags/es.png" alt="us">
-                              <span>España</span>
-                          </div>
-                          <div class="flag" id="sw">
-                              <img src="./assets/flags/sw.png" alt="us">
-                              <span>Sverige</span>
-                          </div>
-                          <div class="flag" id="aus">
-                              <img src="./assets/flags/aus.png" alt="us">
-                              <span>Australia</span>
-                          </div>
-                          <div class="flag" id="ck">
-                              <img src="./assets/flags/ck.png" alt="us">
-                              <span>Česká republika</span>
-                          </div>
-                          <div class="flag" id="ch">
-                              <span>中国</span>
-                          </div>
-                          <div class="flag" id="fr">
-                              <img src="./assets/flags/fr.png" alt="us">
-                              <span>France</span>
-                          </div>
-                          <div class="flag" id="ca-en">
-                              <img src="./assets/flags/ca.png" alt="us">
-                              <span>Canada(En)</span>
-                          </div>
-                          <div class="flag" id="kr">
-                              <img src="./assets/flags/kr.png" alt="us">
-                              <span>대한민국</span>
-                          </div>
-                          <div class="flag" id="de">
-                              <img src="./assets/flags/de.png" alt="us">
-                              <span>Deustschland</span>
-                          </div>
-                          <div class="flag" id="ca-fr">
-                              <img src="./assets/flags/ca.png" alt="us">
-                              <span>Canada(Fr)</span>
-                          </div>
-                          <div class="flag" id="ch-tr">
-                              <span>繁體中文</span>
-                          </div>
-                          <div class="flag" id="it">
-                              <img src="./assets/flags/it.png" alt="us">
-                              <span>Italia</span>
-                              <img src="./assets/check.png" alt="check" id="check">
-                          </div>
-                          <div class="flag" id="dan">
-                              <img src="./assets/flags/dan.png" alt="us">
-                              <span>Danmark</span>
-                          </div>
-                          <div class="flag" id="jp">
-                              <img src="./assets/flags/jp.png" alt="us">
-                              <span>日本</span>
-                          </div>
-                          <div class="flag" id="pl">
-                              <img src="./assets/flags/pl.png" alt="us">
-                              <span>Polska</span>
-                          </div>
-                          <div class="flag" id="bl">
-                              <img src="./assets/flags/bl.png" alt="us">
-                              <span>Brasil</span>
-                          </div>
-                          <div class="flag" id="fin">
-                              <img src="./assets/flags/fin.png" alt="us">
-                              <span>Suomi</span>
-                          </div>
-                          <div class="flag" id="mex">
-                              <img src="./assets/flags/mex.png" alt="us">
-                              <span>México</span>
-                          </div>
-                          <div class="flag" id="ne">
-                              <img src="./assets/flags/ne.png" alt="us">
-                              <span>Nederland</span>
-                          </div>
-                          <div class="flag" id="tr">
-                              <img src="./assets/flags/tr.png" alt="us">
-                              <span>Türkiye</span>
-                          </div>
-                          
-                      </div>
+                    </div>
                   </div>
+                
+                <div class="onclick-selection">
+                    <div class="flags">
+                        <div class="flag" id="en" data-img="./assets/flags/us.png" data-span="United States">
+                            <img src="./assets/flags/us.png" alt="us">
+                            <span>United States</span>
+                          </div>
+                          <div class="flag" id="ru" data-img="./assets/flags/ru.png" data-span="Россия">
+                            <img src="./assets/flags/ru.png" alt="us">
+                            <span>Россия</span>
+                          </div>
+                          <div class="flag" id="no" data-img="./assets/flags/nor.png" data-span="Norge">
+                            <img src="./assets/flags/nor.png" alt="us">
+                            <span>Norge</span>
+                          </div>
+                          <div class="flag" id="en" data-img="./assets/flags/uk.png" data-span="United Kingdom">
+                            <img src="./assets/flags/uk.png" alt="us">
+                            <span>United Kingdom</span>
+                          </div>
+                          <div class="flag" id="es" data-img="./assets/flags/es.png" data-span="España">
+                            <img src="./assets/flags/es.png" alt="us">
+                            <span>España</span>
+                          </div>
+                          <div class="flag" id="sv" data-img="./assets/flags/sw.png" data-span="Sverige">
+                            <img src="./assets/flags/sw.png" alt="us">
+                            <span>Sverige</span>
+                          </div>
+                          <div class="flag" id="en" data-img="./assets/flags/aus.png" data-span="Australia">
+                            <img src="./assets/flags/aus.png" alt="us">
+                            <span>Australia</span>
+                          </div>
+                          <div class="flag" id="cs" data-img="./assets/flags/ck.png" data-span="Česká republika">
+                            <img src="./assets/flags/ck.png" alt="us">
+                            <span>Česká republika</span>
+                          </div>
+                          <div class="flag" id="zh-CN" data-img="" data-span="中国">
+                            <span>中国</span>
+                          </div>
+                          <div class="flag" id="fr" data-img="./assets/flags/fr.png" data-span="France">
+                            <img src="./assets/flags/fr.png" alt="us">
+                            <span>France</span>
+                          </div>
+                          <div class="flag" id="en" data-img="./assets/flags/ca.png" data-span="Canada(En)">
+                            <img src="./assets/flags/ca.png" alt="us">
+                            <span>Canada(En)</span>
+                          </div>
+                          <div class="flag" id="ko" data-img="./assets/flags/kr.png" data-span="대한민국">
+                            <img src="./assets/flags/kr.png" alt="us">
+                            <span>대한민국</span>
+                          </div>
+                          <div class="flag" id="de" data-img="./assets/flags/de.png" data-span="Deustschland">
+                            <img src="./assets/flags/de.png" alt="us">
+                            <span>Deustschland</span>
+                          </div>
+                          <div class="flag" id="fr" data-img="./assets/flags/ca.png" data-span="Canada(Fr)">
+                            <img src="./assets/flags/ca.png" alt="us">
+                            <span>Canada(Fr)</span>
+                          </div>
+                          <div class="flag" id="zh-TW" data-img="" data-span="繁體中文">
+                            <span>繁體中文</span>
+                          </div>
+                          <div class="flag" id="it" data-img="./assets/flags/it.png" data-span="Italia">
+                            <img src="./assets/flags/it.png" alt="us">
+                            <span>Italia</span>
+                            <img src="./assets/check.png" alt="check" class="check" id="default-check">
+                          </div>
+                          <div class="flag" id="da" data-img="./assets/flags/dan.png" data-span="Danmark">
+                            <img src="./assets/flags/dan.png" alt="us">
+                            <span>Danmark</span>
+                          </div>
+                          <div class="flag" id="ja" data-img="./assets/flags/jp.png" data-span="日本">
+                            <img src="./assets/flags/jp.png" alt="us">
+                            <span>日本</span>
+                          </div>
+                          <div class="flag" id="pl" data-img="./assets/flags/pl.png" data-span="Polska">
+                            <img src="./assets/flags/pl.png" alt="us">
+                            <span>Polska</span>
+                          </div>
+                          <div class="flag" id="pt" data-img="./assets/flags/bl.png" data-span="Brasil">
+                            <img src="./assets/flags/bl.png" alt="us">
+                            <span>Brasil</span>
+                          </div>
+                          <div class="flag" id="fi" data-img="./assets/flags/fin.png" data-span="Suomi">
+                            <img src="./assets/flags/fin.png" alt="us">
+                            <span>Suomi</span>
+                          </div>
+                          <div class="flag" id="es" data-img="./assets/flags/mex.png" data-span="México">
+                            <img src="./assets/flags/mex.png" alt="us">
+                            <span>México</span>
+                          </div>
+                          <div class="flag" id="nl" data-img="./assets/flags/ne.png" data-span="Nederland">
+                            <img src="./assets/flags/ne.png" alt="us">
+                            <span>Nederland</span>
+                          </div>
+                          <div class="flag" id="tk" data-img="./assets/flags/tr.png" data-span="Türkiye">
+                            <img src="./assets/flags/tr.png" alt="us">
+                            <span>Türkiye</span>
+                          </div>
+                        </div>
+                      </div>
+                <div id="google_translate_element"></div>
+
                   <img src="LivingStyleGuide/media-assets/seal.svg" alt="">
               </div></div>
         </section>
