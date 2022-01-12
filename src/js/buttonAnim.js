@@ -1,4 +1,4 @@
-let buttonSubmit = () => {
+export function buttonSubmit() {
   let mainButton = document.querySelectorAll(".mainButton");
 
   mainButton.forEach((el) => {
@@ -9,6 +9,7 @@ let buttonSubmit = () => {
       };
     };
   });
-};
-
-document.addEventListener("DOMContentLoaded", buttonSubmit);
+}
+export function startButtonAnim() {
+  document.addEventListener("DOMContentLoaded", buttonSubmit);
+}

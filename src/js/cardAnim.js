@@ -1,4 +1,4 @@
-function cardAnim() {
+export function cardAnim() {
   let btn = document.querySelectorAll(".mainBody .title");
   btn.forEach((el) => {
     el.onmouseover = () => {
@@ -31,4 +31,6 @@ function cardAnim() {
   });
 }
 
-window.addEventListener("DOMContentLoaded", cardAnim);
+export function startCardAnim() {
+  window.addEventListener("DOMContentLoaded", cardAnim);
+}

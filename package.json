@@ -1,0 +1,26 @@
+{
+  "name": "electronicarts-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devel": "npx webpack --mode=development --devtool=source-map",
+    "build": "npx webpack --mode=production --devtool=source-map",
+    "serve": "npx webpack serve --mode=production --devtool=source-map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antdlc135/ElectronicArts-clone.git"
+  },
+  "author": "Antonio De Luca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antdlc135/ElectronicArts-clone/issues"
+  },
+  "homepage": "https://github.com/antdlc135/ElectronicArts-clone#readme",
+  "dependencies": {
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3"
+  }
+}

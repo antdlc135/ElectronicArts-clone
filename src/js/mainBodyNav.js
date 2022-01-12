@@ -1,4 +1,4 @@
-let mainBodyNav = () => {
+export function mainBodyNav() {
   let btn = document.querySelectorAll(".mainNavButt");
 
   btn.forEach((el) => {
@@ -19,6 +19,8 @@ let mainBodyNav = () => {
       };
     };
   });
-};
+}
 
-window.addEventListener("DOMContentLoaded", mainBodyNav);
+export function startMainBodyNavAnim() {
+  window.addEventListener("DOMContentLoaded", mainBodyNav);
+}

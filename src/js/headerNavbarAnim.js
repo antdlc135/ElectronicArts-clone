@@ -1,4 +1,4 @@
-function threeDots() {
+export function threeDots() {
   let circleSup = document.querySelector(".circlesSuperPosition");
   let circle = document.querySelectorAll(".nav-circle");
   let std = circleSup.firstElementChild;
@@ -146,4 +146,6 @@ function threeDots() {
   };
 }
 
-window.addEventListener("DOMContentLoaded", threeDots);
+export function startHeaderNavAnim() {
+  window.addEventListener("DOMContentLoaded", threeDots);
+}

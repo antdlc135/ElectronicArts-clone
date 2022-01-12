@@ -1,4 +1,4 @@
-function footerAnim() {
+export function footerAnim() {
   let onclickSelection = document.querySelector(".onclick-selection");
   let selection = document.querySelector(".selection");
   let selectionContainer = document.querySelector(".selection-container");
@@ -88,4 +88,7 @@ function footerAnim() {
     };
   });
 }
-document.addEventListener("DOMContentLoaded", footerAnim);
+
+export function startfooterAnim() {
+  document.addEventListener("DOMContentLoaded", footerAnim);
+}
