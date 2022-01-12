@@ -24,7 +24,7 @@ speed-measure-plugin*.json
 /.vscode
 
 #Folder config file
-desktop.ini
+*.ini
 
 # misc
 /.sass-cache
