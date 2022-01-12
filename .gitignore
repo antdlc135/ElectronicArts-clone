@@ -1,0 +1,47 @@
+# Compiled output
+/tmp
+/out-tsc
+/bazel-out
+
+# dependences
+/node_modules
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+
+#IDEs and editors
+/.idea
+.progject
+.classpath
+.c9
+*.launch
+.settings/
+*.sublime-workspace
+/nbprojecr/*
+
+# TDE - VSCode
+/.vscode
+
+#Folder config file
+desktop.ini
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/lib-cov
+.npm
+.eslintcache
+.node_repl_history
+*.tgz
+.yarn-integrity
+
+# logs
+/logs
+/libpeerconnection.log
+*.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
