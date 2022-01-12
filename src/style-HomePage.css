@@ -5,20 +5,20 @@
 }
 :root {
   --main-colour: ;
-  --secondary-colour: #EAEAEA;
-  --rare-cyan: #5AA0D6;
+  --secondary-colour: #eaeaea;
+  --rare-cyan: #5aa0d6;
   --ea-black: #161616;
   --ea-dark-color: #161616;
-  --ea-light-color: #F3F3F3;
+  --ea-light-color: #f3f3f3;
   --ea-dark-color-rgb: 22, 22, 22;
   --ea-light-color-rgb: 243, 243, 243;
-  --origin-brand-color: #F56C2C;
-  --ea-access-brand-color: #0089CD;
-  --xbox-brand-color: #52B043;
+  --origin-brand-color: #f56c2c;
+  --ea-access-brand-color: #0089cd;
+  --xbox-brand-color: #52b043;
   --playstation-brand-color: #003087;
-  --nintendo-brand-color: #FE0016;
-  --ea-success-color: #00DC8F;
-  --ea-error-color: #FF6969;
+  --nintendo-brand-color: #fe0016;
+  --ea-success-color: #00dc8f;
+  --ea-error-color: #ff6969;
   color: var(--ea-dark-color);
   --main-font: Verdana, Helvetica;
   --bottom-footer-font: "Oswald";
@@ -202,7 +202,7 @@ main h3 {
 .parental-control {
   width: 100%;
   height: 15%;
-  background-color: #6FB0D6;
+  background-color: #6fb0d6;
   justify-content: center;
   padding: 0rem 8rem 0rem 8rem;
 }
@@ -220,4 +220,16 @@ main h3 {
 .parental-control-title > h2 {
   font-size: 20px;
   color: var(--ea-dark-color);
+}
+
+@media all and (max-width: 1006px) {
+  .parental-control-content {
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    flex-basis: 100%;
+  }
+  .parental-control-title {
+    width: 100%;
+  }
 }
