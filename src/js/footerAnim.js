@@ -49,7 +49,7 @@ export function footerAnim() {
     flag.addEventListener("click", () => {
       if (!checked) {
         checked = document.createElement("img");
-        checked.setAttribute("src", "./assets/check.png");
+        checked.setAttribute("src", "../assets/check.png");
         checked.setAttribute("width", "18px");
         checked.setAttribute("height", "18px");
         checked.setAttribute("float", "right");
@@ -58,7 +58,7 @@ export function footerAnim() {
       } else {
         checked.remove();
         checked = document.createElement("img");
-        checked.setAttribute("src", "./assets/check.png");
+        checked.setAttribute("src", "../assets/check.png");
         checked.setAttribute("width", "18px");
         checked.setAttribute("height", "18px");
         checked.setAttribute("float", "right");

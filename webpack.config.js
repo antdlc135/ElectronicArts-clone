@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
@@ -5,5 +6,34 @@ module.exports = {
   output: {
     filename: "./js/bundle.js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/dist/",
   },
+
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
+      },
+      {
+        test: /\.(svg|png|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "[name][ext]",
+        },
+      },
+    ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index-HomePage.html",
+    }),
+  ],
 };
