@@ -13,14 +13,14 @@
 .a-social-footer {
   flex-wrap: wrap;
   gap: 1rem 2rem;
-  width: 75%;
+  width: 100%;
 }
 .a-social-footer *:hover {
   color: rgb(234, 67, 67);
 }
 .social-footer {
   background-color: var(--secondary-colour);
-  padding: 3.5rem 8rem 3.5rem 8rem;
+  padding: 3.5rem 8rem 3.5rem 13vw;
 }
 
 .links-n-icon {
@@ -30,6 +30,7 @@
 .social {
   margin: 0;
   align-items: flex-end;
+  width: 30%;
 }
 .social-icons {
   justify-content: space-between;
@@ -54,14 +55,13 @@ footer > section {
 }
 .bottom-footer {
   background-color: var(--ea-light-color);
-  padding: 3rem 8rem 3rem 8rem;
+  padding: 3rem 8rem 3rem 13vw;
   justify-content: center;
-  max-height: 300px;
 }
 .bottom-footer-container {
   display: grid;
   grid-template-columns: 40px 6fr 2fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   column-gap: 50px;
 }
 footer > section > div {
@@ -250,6 +250,7 @@ footer > section > div {
   }
   p.social-title {
     font-size: 12px;
+    width: 12rem;
   }
   .social-icons > img {
     width: 22px;
@@ -268,8 +269,11 @@ footer > section > div {
   }
 
   @media all and (max-width: 1006px) {
-    .a-social-footer {
+    .social {
       width: 100%;
+    }
+    .a-social-footer {
+      width: 100vw;
     }
     .middle-bottom-footer {
       width: 100%;
@@ -278,15 +282,15 @@ footer > section > div {
       flex-direction: row-reverse;
     }
     .bottom-footer {
-      max-height: 400px;
     }
     .bottom-footer-container {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
       row-gap: 20px;
     }
     .lang-mobile {
       display: flex;
+      width: 100%;
     }
     .selection {
       display: none;
@@ -304,6 +308,26 @@ footer > section > div {
     .social {
       width: 40%;
       align-items: flex-start;
+    }
+  }
+  @media all and (max-width: 640px) {
+    .bottom-footer-links {
+      flex-wrap: wrap;
+      width: 90%;
+    }
+    .bottom-footer {
+      padding: 1rem 1rem 3rem 1rem;
+    }
+    .social-footer {
+      padding: 1rem 1rem 3rem 1rem;
+    }
+    .a-social-footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      border-bottom: 1px solid rgb(53, 49, 49);
+      gap: 0 2rem;
+      padding-bottom: 1rem;
     }
   }
 }
