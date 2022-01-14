@@ -30,7 +30,3 @@ export function cardAnim() {
     };
   });
 }
-
-export function startCardAnim() {
-  window.addEventListener("DOMContentLoaded", cardAnim);
-}
