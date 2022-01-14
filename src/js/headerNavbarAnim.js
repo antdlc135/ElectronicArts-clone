@@ -1,4 +1,14 @@
 export function HeaderNav() {
+  //footer
+  let header = document.querySelector("body> header");
+  let headerHeight = document.querySelector("body > header > .headerHeight");
+  let account = document.querySelector("#account");
+  let help = document.querySelector("#help");
+
+  let headerSVGa = document.querySelectorAll("header > a:not(:last-child)");
+  let EA = document.querySelector("header > a:last-child");
+
+  //nav
   let circleSup = window.document.querySelector(".circlesSuperPosition");
   let circle = document.querySelectorAll(".nav-circle");
   let std = circleSup.firstElementChild;
@@ -7,7 +17,7 @@ export function HeaderNav() {
   let blackBack = document.querySelector(".blackBack");
   let close = document.querySelector(".close-x");
   let closeRed = document.querySelector("[src*=close-red]");
-  let header = document.querySelector("body> header");
+
   let nav = document.querySelector(".toBackGround > nav");
   let select = document.querySelectorAll(
     "nav > .navMenu > div > span > .select > section > div > a"
@@ -17,10 +27,20 @@ export function HeaderNav() {
   let divNavMenu = document.querySelectorAll("nav > .navMenu > div");
   let body = document.querySelector("body");
   let titleAside = document.querySelectorAll(".play .titleAside");
+  console.log(account);
 
-  let headerSVGa = document.querySelectorAll("header > a:not(:last-child)");
-
-  let EA = document.querySelector("header > a:last-child");
+  account.onclick = () => {
+    headerHeight.style.minHeight = "25rem";
+    account.addEventListener("click", () => {
+      headerHeight.style.minHeight = 0;
+    });
+  };
+  help.onclick = () => {
+    headerHeight.style.minHeight = "25rem";
+    help.addEventListener("click", () => {
+      headerHeight.style.minHeight = 0;
+    });
+  };
 
   headerSVGa.forEach((el) => {
     el.firstElementChild.setAttribute("fill", "#9f9f9f");
