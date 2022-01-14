@@ -6,9 +6,10 @@ module.exports = {
   output: {
     filename: "./js/bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/dist/",
   },
-
+  devServer: {
+    static: "./",
+  },
   module: {
     rules: [
       {
@@ -26,7 +27,7 @@ module.exports = {
         test: /\.(svg|png|jpg|jpeg|gif)$/i,
         type: "asset/resource",
         generator: {
-          filename: "[name][ext]",
+          filename: "[path][name][ext]",
         },
       },
     ],

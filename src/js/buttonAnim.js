@@ -10,6 +10,3 @@ export function buttonSubmit() {
     };
   });
 }
-export function startButtonAnim() {
-  document.addEventListener("DOMContentLoaded", buttonSubmit);
-}

@@ -20,7 +20,3 @@ export function mainBodyNav() {
     };
   });
 }
-
-export function startMainBodyNavAnim() {
-  window.addEventListener("DOMContentLoaded", mainBodyNav);
-}

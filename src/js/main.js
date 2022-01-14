@@ -1,9 +1,13 @@
 import "../scss/main.scss";
-import "../scss/style-HomePage-cards.scss";
 
-// import "../js/googleScript";
-// import * as headerNavbarAnim from "./headerNavbarAnim";
-// import { mainBodyNav, startMainBodyNavAnim } from "./mainBodyNav";
-// import { buttonSubmit, startButtonAnim } from "./buttonAnim";
-// import { cardAnim, startCardAnim } from "./cardAnim";
-// import { footerAnim, startfooterAnim } from "./footerAnim";
+import { HeaderNav } from "./headerNavbarAnim";
+HeaderNav();
+import { mainBodyNav } from "./mainBodyNav";
+mainBodyNav();
+import { buttonSubmit } from "./buttonAnim";
+buttonSubmit();
+import { cardAnim } from "./cardAnim";
+cardAnim();
+
+// import { footerAnim } from "./footerAnim";
+// footerAnim();
