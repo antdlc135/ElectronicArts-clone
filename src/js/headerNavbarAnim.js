@@ -2,11 +2,12 @@ export function HeaderNav() {
   //footer
   let header = document.querySelector("body> header");
   let headerHeight = document.querySelector("body > header > .headerHeight");
+
   let account = document.querySelector("#account");
   let help = document.querySelector("#help");
-
-  let headerSVGa = document.querySelectorAll("header > a:not(:last-child)");
-  let EA = document.querySelector("header > a:last-child");
+  let headerButtons = document.querySelector("body > header > section");
+  let headerSVGa = document.querySelectorAll("header > section");
+  let EA = document.querySelector("header > a");
 
   //nav
   let circleSup = window.document.querySelector(".circlesSuperPosition");
@@ -27,24 +28,45 @@ export function HeaderNav() {
   let divNavMenu = document.querySelectorAll("nav > .navMenu > div");
   let body = document.querySelector("body");
   let titleAside = document.querySelectorAll(".play .titleAside");
-  console.log(account);
 
-  account.onclick = () => {
-    headerHeight.style.minHeight = "25rem";
-    account.addEventListener("click", () => {
-      headerHeight.style.minHeight = 0;
-    });
+  let closeHeaderHeight = () => {
+    header.style.top = "0";
+    nav.style.top = "33px";
+    headerHeight.style.minHeight = 0;
+    isOpen = false;
+    body.style.overflow = "scroll";
+    return height();
   };
-  help.onclick = () => {
+  let openHeaderHeight = () => {
+    header.style.top = "-35px";
+    nav.style.top = "-1px";
     headerHeight.style.minHeight = "25rem";
-    help.addEventListener("click", () => {
-      headerHeight.style.minHeight = 0;
-    });
+    isOpen = true;
+    body.style.overflow = "hidden";
+    toBackGround.onclick = () => {
+      closeHeaderHeight();
+      return height();
+    };
   };
+
+  let isOpen = false;
+  (function height() {
+    isOpen
+      ? (account.onclick = () => {
+          closeHeaderHeight();
+        }) &&
+        (help.onclick = () => {
+          closeHeaderHeight();
+        })
+      : (account.onclick = () => {
+          openHeaderHeight();
+        }) &&
+        (help.onclick = () => {
+          openHeaderHeight();
+        });
+  })();
 
   headerSVGa.forEach((el) => {
-    el.firstElementChild.setAttribute("fill", "#9f9f9f");
-    console.log(el);
     el.onmouseover = () => {
       el.firstElementChild.setAttribute("fill", "#f3f3f3");
       el.onmouseout = () => {
