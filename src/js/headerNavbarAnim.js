@@ -2,6 +2,14 @@ export function HeaderNav() {
   //footer
   let header = document.querySelector("body> header");
   let headerHeight = document.querySelector("body > header > .headerHeight");
+  let closeHeader = document.querySelector(
+    "body> header>.headerHeight>.closeHeader"
+  );
+  let accountSect = document.querySelector("#accountSect");
+  let helpSect = document.querySelector("#helpSect");
+  let headerLink = document.querySelectorAll(
+    "body > header > .headerHeight> section>section>a"
+  );
 
   let account = document.querySelector("#account");
   let help = document.querySelector("#help");
@@ -28,6 +36,28 @@ export function HeaderNav() {
   let body = document.querySelector("body");
   let titleAside = document.querySelectorAll(".play .titleAside");
 
+  // footer
+  EA.onmouseover = () => {
+    EA.firstElementChild.setAttribute("fill", "#8B8B8B");
+  };
+  EA.onmouseout = () => {
+    EA.firstElementChild.setAttribute("fill", "#5c5c5c");
+  };
+
+  let goDown = (el) => {
+    el.style.top = "50%";
+    el.dataset.isdown = true;
+  };
+  let goUp = (el) => {
+    el.style.top = "-400px";
+    el.dataset.isdown = false;
+  };
+
+  closeHeader.onclick = () => {
+    decolorHeadIcon();
+    closeHeaderHeight();
+  };
+
   let closeHeaderHeight = () => {
     headerHeight.firstElementChild.style.transition = "none";
     headerHeight.firstElementChild.style.opacity = 0;
@@ -36,22 +66,11 @@ export function HeaderNav() {
     headerHeight.style.minHeight = 0;
     headerHeight.classList.remove("headerHeightShad");
     body.style.overflow = "scroll";
-    account.firstElementChild.setAttribute("fill", "#9f9f9f");
-    help.firstElementChild.setAttribute("fill", "#9f9f9f");
-    account.onclick = (ev) => {
-      openHeaderHeight(ev);
-    };
-    help.onclick = (ev) => {
-      openHeaderHeight(ev);
-    };
   };
 
   let openHeaderHeight = (ev) => {
     headerHeight.firstElementChild.style.transition = "500ms";
     headerHeight.firstElementChild.style.opacity = 1;
-
-    ev.target.firstElementChild.setAttribute("fill", "#f3f3f3");
-
     if (window.pageYOffset != 0) {
       header.style.top = "-35px";
       nav.style.top = "-1px";
@@ -59,36 +78,26 @@ export function HeaderNav() {
     headerHeight.style.minHeight = "25rem";
     headerHeight.classList.add("headerHeightShad");
     body.style.overflow = "hidden";
-
-    account.onclick = () => {
-      closeHeaderHeight();
-    };
-    help.onclick = () => {
-      closeHeaderHeight();
-    };
-    toBackGround.onclick = () => {
-      closeHeaderHeight();
-    };
   };
-  closeHeaderHeight();
+
+  let decolorHeadIcon = () => {
+    headerSVGa.forEach((el) => {
+      el.firstElementChild.setAttribute("fill", "#9f9f9f");
+    });
+  };
 
   headerSVGa.forEach((el) => {
-    el.onmouseover = () => {
+    el.onclick = () => {
+      decolorHeadIcon();
       el.firstElementChild.setAttribute("fill", "#f3f3f3");
-      el.onmouseout = () => {
-        if (headerHeight.style.minHeight != "25rem") {
-          el.firstElementChild.setAttribute("fill", "#9f9f9f");
-        }
+      openHeaderHeight();
+      toBackGround.onclick = () => {
+        decolorHeadIcon();
+        closeHeaderHeight();
       };
     };
   });
-
-  EA.onmouseover = () => {
-    EA.firstElementChild.setAttribute("fill", "#8B8B8B");
-  };
-  EA.onmouseout = () => {
-    EA.firstElementChild.setAttribute("fill", "#5c5c5c");
-  };
+  // footer-end
 
   titleAside.forEach((el) => {
     el.onmouseover = () => {
