@@ -2,6 +2,9 @@ export function HeaderNav() {
   //footer
   let header = document.querySelector("body> header");
   let headerHeight = document.querySelector("body > header > .headerHeight");
+  let headerSheets = document.querySelectorAll(
+    "body > header > .headerHeight> section"
+  );
   let closeHeader = document.querySelector(
     "body> header>.headerHeight>.closeHeader"
   );
@@ -46,16 +49,14 @@ export function HeaderNav() {
 
   let goDown = (el) => {
     el.style.top = "50%";
-    el.dataset.isdown = true;
   };
   let goUp = (el) => {
     el.style.top = "-400px";
-    el.dataset.isdown = false;
   };
-
-  closeHeader.onclick = () => {
-    decolorHeadIcon();
-    closeHeaderHeight();
+  let goUpAll = () => {
+    headerSheets.forEach((el) => {
+      el.style.top = "-400px";
+    });
   };
 
   let closeHeaderHeight = () => {
@@ -68,7 +69,7 @@ export function HeaderNav() {
     body.style.overflow = "scroll";
   };
 
-  let openHeaderHeight = (ev) => {
+  let openHeaderHeight = () => {
     headerHeight.firstElementChild.style.transition = "500ms";
     headerHeight.firstElementChild.style.opacity = 1;
     if (window.pageYOffset != 0) {
@@ -87,12 +88,25 @@ export function HeaderNav() {
   };
 
   headerSVGa.forEach((el) => {
-    el.onclick = () => {
+    el.onclick = (ev) => {
       decolorHeadIcon();
       el.firstElementChild.setAttribute("fill", "#f3f3f3");
       openHeaderHeight();
+      if (ev.target.id == account.id) {
+        goDown(accountSect);
+        goUp(helpSect);
+      } else {
+        goDown(helpSect);
+        goUp(accountSect);
+      }
       toBackGround.onclick = () => {
         decolorHeadIcon();
+        goUpAll();
+        closeHeaderHeight();
+      };
+      closeHeader.onclick = () => {
+        decolorHeadIcon();
+        goUpAll();
         closeHeaderHeight();
       };
     };
