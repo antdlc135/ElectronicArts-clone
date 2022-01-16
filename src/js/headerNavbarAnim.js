@@ -5,7 +5,6 @@ export function HeaderNav() {
 
   let account = document.querySelector("#account");
   let help = document.querySelector("#help");
-  let headerButtons = document.querySelector("body > header > section");
   let headerSVGa = document.querySelectorAll("header > section");
   let EA = document.querySelector("header > a");
 
@@ -30,47 +29,56 @@ export function HeaderNav() {
   let titleAside = document.querySelectorAll(".play .titleAside");
 
   let closeHeaderHeight = () => {
+    headerHeight.firstElementChild.style.transition = "none";
+    headerHeight.firstElementChild.style.opacity = 0;
     header.style.top = "0";
     nav.style.top = "33px";
     headerHeight.style.minHeight = 0;
-    isOpen = false;
+    headerHeight.classList.remove("headerHeightShad");
     body.style.overflow = "scroll";
-    return height();
-  };
-  let openHeaderHeight = () => {
-    header.style.top = "-35px";
-    nav.style.top = "-1px";
-    headerHeight.style.minHeight = "25rem";
-    isOpen = true;
-    body.style.overflow = "hidden";
-    toBackGround.onclick = () => {
-      closeHeaderHeight();
-      return height();
+    account.firstElementChild.setAttribute("fill", "#9f9f9f");
+    help.firstElementChild.setAttribute("fill", "#9f9f9f");
+    account.onclick = (ev) => {
+      openHeaderHeight(ev);
+    };
+    help.onclick = (ev) => {
+      openHeaderHeight(ev);
     };
   };
 
-  let isOpen = false;
-  (function height() {
-    isOpen
-      ? (account.onclick = () => {
-          closeHeaderHeight();
-        }) &&
-        (help.onclick = () => {
-          closeHeaderHeight();
-        })
-      : (account.onclick = () => {
-          openHeaderHeight();
-        }) &&
-        (help.onclick = () => {
-          openHeaderHeight();
-        });
-  })();
+  let openHeaderHeight = (ev) => {
+    headerHeight.firstElementChild.style.transition = "500ms";
+    headerHeight.firstElementChild.style.opacity = 1;
+
+    ev.target.firstElementChild.setAttribute("fill", "#f3f3f3");
+
+    if (window.pageYOffset != 0) {
+      header.style.top = "-35px";
+      nav.style.top = "-1px";
+    }
+    headerHeight.style.minHeight = "25rem";
+    headerHeight.classList.add("headerHeightShad");
+    body.style.overflow = "hidden";
+
+    account.onclick = () => {
+      closeHeaderHeight();
+    };
+    help.onclick = () => {
+      closeHeaderHeight();
+    };
+    toBackGround.onclick = () => {
+      closeHeaderHeight();
+    };
+  };
+  closeHeaderHeight();
 
   headerSVGa.forEach((el) => {
     el.onmouseover = () => {
       el.firstElementChild.setAttribute("fill", "#f3f3f3");
       el.onmouseout = () => {
-        el.firstElementChild.setAttribute("fill", "#9f9f9f");
+        if (headerHeight.style.minHeight != "25rem") {
+          el.firstElementChild.setAttribute("fill", "#9f9f9f");
+        }
       };
     };
   });
