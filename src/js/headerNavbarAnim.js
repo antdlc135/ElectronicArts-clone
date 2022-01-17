@@ -59,6 +59,12 @@ export function HeaderNav() {
     });
   };
 
+  let closeAll = () => {
+    decolorHeadIcon();
+    goUpAll();
+    closeHeaderHeight();
+  };
+
   let closeHeaderHeight = () => {
     headerHeight.firstElementChild.style.transition = "none";
     headerHeight.firstElementChild.style.opacity = 0;
@@ -87,31 +93,52 @@ export function HeaderNav() {
     });
   };
 
-  headerSVGa.forEach((el) => {
-    el.onclick = (ev) => {
-      decolorHeadIcon();
-      el.firstElementChild.setAttribute("fill", "#f3f3f3");
-      openHeaderHeight();
-      if (ev.target.id == account.id) {
-        goDown(accountSect);
-        goUp(helpSect);
-      } else {
-        goDown(helpSect);
-        goUp(accountSect);
-      }
-      toBackGround.onclick = () => {
+  // header icon animation
+  (function eachHeaderSVG() {
+    headerSVGa.forEach((el) => {
+      el.onclick = (ev) => {
         decolorHeadIcon();
-        goUpAll();
-        closeHeaderHeight();
+        el.firstElementChild.setAttribute("fill", "#f3f3f3");
+        openHeaderHeight();
+        if (ev.target.id == account.id) {
+          goDown(accountSect);
+          goUp(helpSect);
+        } else {
+          goDown(helpSect);
+          goUp(accountSect);
+        }
+        ev.target.onclick = () => {
+          decolorHeadIcon();
+          el.firstElementChild.setAttribute("fill", "#f3f3f3");
+          if (
+            (ev.target.id == account.id && accountSect.style.top == "50%") ||
+            (ev.target.id == help.id && helpSect.style.top == "50%")
+          ) {
+            closeAll();
+            return eachHeaderSVG();
+          } else {
+            if (ev.target.id == account.id) {
+              goDown(accountSect);
+              goUp(helpSect);
+            } else {
+              goDown(helpSect);
+              goUp(accountSect);
+            }
+          }
+        };
+        toBackGround.onclick = () => {
+          closeAll();
+          return eachHeaderSVG();
+        };
+        closeHeader.onclick = () => {
+          closeAll();
+          return eachHeaderSVG();
+        };
       };
-      closeHeader.onclick = () => {
-        decolorHeadIcon();
-        goUpAll();
-        closeHeaderHeight();
-      };
-    };
-  });
-  // footer-end
+    });
+  })();
+
+  // header-end
 
   titleAside.forEach((el) => {
     el.onmouseover = () => {

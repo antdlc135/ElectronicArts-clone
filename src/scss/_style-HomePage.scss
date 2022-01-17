@@ -288,6 +288,12 @@ main h3 {
   margin-left: 2px;
   display: flex;
   align-items: center;
+  &:hover {
+    background-color: #dedede;
+    & > button {
+      color: #676767;
+    }
+  }
 }
 
 .tablink {

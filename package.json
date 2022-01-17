@@ -6,7 +6,7 @@
   "scripts": {
     "devel": "npx webpack --mode=development --devtool=source-map",
     "build": "npx webpack --mode=production --devtool=source-map",
-    "serve": "npx webpack serve --mode=production --devtool=source-map"
+    "serve": "npx webpack serve --mode=development --devtool=source-map"
   },
   "repository": {
     "type": "git",
