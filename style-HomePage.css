@@ -219,6 +219,7 @@ main h3 {
  
 .tabs button:focus {
   border-bottom: 3px solid #f85d20;
+  background-color: rgb(199, 199, 199);
   margin-right: 0 auto;
 } 
 .tabcontainer {

@@ -15,8 +15,6 @@ const addActiveTab = tab => {
     const href = tab.querySelector("a").getAttribute("href");
     let matchingContent   = document.querySelector('[id="'+`${href}`+'"]');
     matchingContent.classList.add("is-active");
-
-
 }
 
 function openMainTab() {
