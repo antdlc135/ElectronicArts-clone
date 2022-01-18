@@ -286,12 +286,26 @@ main h3 {
 .mainNavButt {
   height: 60px;
   margin-left: 2px;
+  position: relative;
   display: flex;
   align-items: center;
-  &:hover {
-    background-color: #dedede;
-    & > button {
-      color: #676767;
+  cursor: pointer;
+  & > .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+  }
+}
+
+.mainNavBackground {
+  background-color: #dedede;
+  & > button {
+    color: #676767;
+    & > span {
+      transition: 50ms;
     }
   }
 }
@@ -311,8 +325,4 @@ main h3 {
 .tablink > span {
   display: inline-block;
   height: 45px;
-}
-
-.tablink > #test {
-  border-bottom: 3px solid var(--main-colour);
 }
