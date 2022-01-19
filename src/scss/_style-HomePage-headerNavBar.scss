@@ -1,9 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --main-colour: #ff4747;
   --secondary-colour: #eaeaea;
   --rare-cyan: #5aa0d6;
   --ea-black: #161616;
-
   --ea-dark-color: #161616;
   --ea-light-color: #f3f3f3;
   --ea-dark-color-rgb: 22, 22, 22;
@@ -18,19 +23,125 @@
   --ea-clone-light-gray: #9b9797;
 }
 
+$font-weights: (
+  "regular": 200,
+  "medium": 500,
+  "bold": 700,
+);
+
+@mixin flexAlignCenter($direction, $justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin positionAbsoluteCenter {
+  position: absolute;
+  top: -400px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 500ms;
+}
+
 body > header {
-  height: 2.3rem;
+  height: 2.4rem;
+  width: 100%;
   background-color: var(--ea-black);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   gap: 39px;
-  width: 100%;
   position: fixed;
   top: 0;
   z-index: 10;
   transition: top 300ms linear;
+}
+
+body > header {
+  & > section:hover {
+    & > svg {
+      fill: var(--ea-light-color);
+    }
+  }
+  & > .headerHeight {
+    font-size: 16px;
+    font-family: sans-serif;
+    position: absolute;
+    top: 2.3rem;
+    min-height: 0;
+    width: 100%;
+    background-color: inherit;
+    transition: 300ms ease-in-out;
+    @include flexAlignCenter(column, center);
+    & > section {
+      @include positionAbsoluteCenter;
+      @include flexAlignCenter(column, center);
+      gap: 20px;
+      width: 650px;
+      transition: 400ms ease-out;
+      & > section {
+        transition: 1000ms;
+        @include flexAlignCenter(row, space-between);
+        width: 80%;
+        & > div {
+          @include flexAlignCenter(column, center);
+          row-gap: 25px;
+          flex-basis: 232px;
+          height: 150px;
+        }
+      }
+      & a {
+        color: var(--ea-light-color);
+        font-weight: map-get($font-weights, regular);
+        @include flexAlignCenter(column, center);
+        gap: 5px;
+        transition: 100ms ease-in;
+        &:hover {
+          transform: translate(0, -8px);
+        }
+        & > img {
+          width: 36px;
+        }
+      }
+      & > p {
+        color: var(--ea-light-color);
+        font-size: 14px;
+        & > a {
+          display: inline;
+          color: #ff1e3c;
+        }
+      }
+    }
+
+    & > .closeHeader {
+      position: absolute;
+      top: 45px;
+      right: 35px;
+      z-index: 10;
+      width: 14px;
+      height: 14px;
+      transition: 500ms;
+      cursor: pointer;
+    }
+  }
+}
+
+.headerHeightShad {
+  &::after {
+    content: " ";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--ea-black);
+    box-shadow: 0 5px 40px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.toBackGround {
+  box-shadow: 5px 0 20px 2px #888888 inset;
 }
 
 .toBackGround > nav {
@@ -188,7 +299,7 @@ nav > .navMenu > div > svg {
   flex-direction: column;
   overflow: scroll;
   z-index: 9;
-  transition: 170ms ease-out;
+  transition: 200ms ease-out;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
