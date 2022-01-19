@@ -1,8 +1,8 @@
 export function mainBodyNav() {
   let btn = document.querySelectorAll(".mainNavButt> .cover");
-  let cardsSheet = [];
+  let cardsSheets = [];
   document.querySelectorAll(".cards>section").forEach((el) => {
-    cardsSheet.push(el);
+    cardsSheets.push(el);
   });
   let check = btn[0];
 
@@ -11,37 +11,49 @@ export function mainBodyNav() {
       el.parentElement.classList.remove("mainNavBackground");
       el.nextElementSibling.firstElementChild.style.borderBottom = "0";
     });
-    cardsSheet.forEach((cards) => {
-      cards.style.display = "none";
+    cardsSheets.forEach((sheet) => {
+      sheet.style.display = "none";
     });
   }
+
   decolorButttons();
 
-  check.parentElement.classList.add("mainNavBackground");
-  check.nextElementSibling.firstElementChild.style.borderBottom =
-    "3px solid var(--main-colour)";
-  let firstCards = cardsSheet.find(
-    (el) => el.dataset.info === check.dataset.info
-  );
-  firstCards.style.display = "grid";
+  function onclickAndDefault(el) {
+    decolorButttons();
+    el.parentElement.classList.add("mainNavBackground");
+    el.nextElementSibling.firstElementChild.style.borderBottom =
+      "3px solid var(--main-colour)";
+    let sheet = cardsSheets.find(
+      (elem) => elem.dataset.info === el.dataset.info
+    );
+    let sheetCards = sheet.children;
+    for (let i = 0; i < sheetCards.length; i++) {
+      sheetCards[i].style.transform = "translateY(-10px)";
+      sheetCards[i].style.setProperty("--opacity", 1);
+    }
+    sheet.style.display = "grid";
+    setTimeout(() => {
+      for (let i = 0; i < sheetCards.length; i++) {
+        sheetCards[i].style.transform = "translateY(0)";
+        sheetCards[i].style.setProperty("--opacity", 0);
+      }
+    }, 200);
+    check = el;
+  }
+
+  onclickAndDefault(check);
 
   btn.forEach((el) => {
     el.onclick = () => {
-      decolorButttons();
-      el.parentElement.classList.add("mainNavBackground");
-      el.nextElementSibling.firstElementChild.style.borderBottom =
-        "3px solid var(--main-colour)";
-      let cards = cardsSheet.find(
-        (elem) => elem.dataset.info === el.dataset.info
-      );
-      cards.style.display = "grid";
-      check = ev.target;
+      if (check !== el) {
+        onclickAndDefault(el);
+      }
     };
     el.onmouseover = () => {
       el.parentElement.classList.add("mainNavBackground");
     };
-    el.onmouseout = (ev) => {
-      if (check === ev.target) {
+    el.onmouseout = () => {
+      if (check === el) {
         el.parentElement.classList.add("mainNavBackground");
       } else {
         el.parentElement.classList.remove("mainNavBackground");

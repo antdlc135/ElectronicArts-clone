@@ -80,7 +80,9 @@ body > header {
       @include flexAlignCenter(column, center);
       gap: 20px;
       width: 650px;
+      transition: 400ms ease-out;
       & > section {
+        transition: 1000ms;
         @include flexAlignCenter(row, space-between);
         width: 80%;
         & > div {

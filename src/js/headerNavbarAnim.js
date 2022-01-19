@@ -9,11 +9,6 @@ export function HeaderNav() {
     "body> header>.headerHeight>.closeHeader"
   );
   let accountSect = document.querySelector("#accountSect");
-  let helpSect = document.querySelector("#helpSect");
-  let headerLink = document.querySelectorAll(
-    "body > header > .headerHeight> section>section>a"
-  );
-
   let account = document.querySelector("#account");
   let help = document.querySelector("#help");
   let headerSVGa = document.querySelectorAll("header > section");
@@ -28,18 +23,13 @@ export function HeaderNav() {
   let blackBack = document.querySelector(".blackBack");
   let close = document.querySelector(".close-x");
   let closeRed = document.querySelector("[src*=close-red]");
-
   let nav = document.querySelector(".toBackGround > nav");
-  let select = document.querySelectorAll(
-    "nav > .navMenu > div > span > .select > section > div > a"
-  );
-  let spanNavMenu = document.querySelectorAll("nav > .navMenu > div> span");
   let toBackGround = document.querySelector(".toBackGround");
   let divNavMenu = document.querySelectorAll("nav > .navMenu > div");
   let body = document.querySelector("body");
   let titleAside = document.querySelectorAll(".play .titleAside");
 
-  // footer
+  // header
   EA.onmouseover = () => {
     EA.firstElementChild.setAttribute("fill", "#8B8B8B");
   };
@@ -48,9 +38,15 @@ export function HeaderNav() {
   };
 
   let goDown = (el) => {
+    el === accountSect
+      ? (el.firstElementChild.style.opacity = 1)
+      : (el.firstElementChild.nextElementSibling.style.opacity = 1);
     el.style.top = "50%";
   };
   let goUp = (el) => {
+    el === accountSect
+      ? (el.firstElementChild.style.opacity = 0)
+      : (el.firstElementChild.nextElementSibling.style.opacity = 0);
     el.style.top = "-400px";
   };
   let goUpAll = () => {
