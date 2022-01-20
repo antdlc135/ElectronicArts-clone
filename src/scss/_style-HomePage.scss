@@ -47,6 +47,10 @@ body {
   }
 }
 
+.skiptranslate {
+  display: none;
+}
+
 body > main {
   flex-basis: 100%;
 }
