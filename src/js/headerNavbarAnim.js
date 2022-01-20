@@ -62,16 +62,18 @@ export function HeaderNav() {
   };
 
   let closeHeaderHeight = () => {
+    closeHeader.style.opacity = 0;
     headerHeight.firstElementChild.style.transition = "none";
     headerHeight.firstElementChild.style.opacity = 0;
+    headerHeight.style.minHeight = 0;
     header.style.top = "0";
     nav.style.top = "33px";
-    headerHeight.style.minHeight = 0;
     headerHeight.classList.remove("headerHeightShad");
     body.style.overflow = "scroll";
   };
 
   let openHeaderHeight = () => {
+    closeHeader.style.opacity = 1;
     headerHeight.firstElementChild.style.transition = "500ms";
     headerHeight.firstElementChild.style.opacity = 1;
     if (window.pageYOffset != 0) {
